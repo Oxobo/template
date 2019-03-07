@@ -1,12 +1,11 @@
 package ir.itsurena.base.sima;
 
-import ir.itsurena.base.sima.dto.xml.general.SimaObjectFactory;
 import ir.itsurena.base.dto.library.PrincipalType;
 import ir.itsurena.base.dto.request.PingRequestType;
+import ir.itsurena.base.sima.dto.xml.general.SimaObjectFactory;
 import ir.itsurena.base.sima.jms.MessageSender;
 import ir.itsurena.base.sima.request.PingRequestService;
 import ir.itsurena.base.sima.service.LogService;
-import ir.itsurena.base.sima.service.request.PingRequestServiceImpl;
 import ir.itsurena.base.sima.util.XmlParser;
 import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
@@ -53,7 +52,7 @@ public class SimaApplicationTests {
         principalType.setUsername("jafar");
         principalType.setPassword("jafar");
         principalType.setBranchCode("12");
-        PingRequestType pingRequestType = new PingRequestType();
+        PingRequestType pingRequestType = pingRequestService.createType();
         pingRequestType.setPrincipal(principalType);
         pingRequestType.setVersion("2.0");
         pingRequestType.setMessageId(UUID.randomUUID().toString());

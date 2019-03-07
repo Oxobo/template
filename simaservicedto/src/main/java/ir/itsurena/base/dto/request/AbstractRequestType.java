@@ -128,4 +128,39 @@ public abstract class AbstractRequestType {
         return this.any;
     }
 
+    public PrincipalType getPrincipal() {
+        return principal;
+    }
+
+    public void setPrincipal(PrincipalType principal) {
+        this.principal = principal;
+    }
+
+    public String getMessageId() {
+        return messageId;
+    }
+
+    public void setMessageId(String messageId) {
+        this.messageId = messageId;
+    }
+
+    public boolean isTest() {
+        return test;
+    }
+
+    public void setTest(boolean test) {
+        this.test = test;
+    }
+
+    public String getVersion() {
+        return version;
+    }
+
+    public void setVersion(String version) {
+        this.version = version;
+    }
+
+    public void setAny(List<Object> any) {
+        this.any = any;
+    }
 }
