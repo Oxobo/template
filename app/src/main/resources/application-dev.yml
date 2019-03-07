@@ -1,0 +1,53 @@
+server:
+    port: 8081
+spring:
+  datasource:
+    url: "jdbc:postgresql://localhost:5432/postgres"
+    driverClassName: "org.postgresql.Driver"
+    username: "hossein"
+    password: "123456"
+
+    hikari:
+      connection-timeout: 60000
+      maximum-pool-size: 5
+      minimumIdle: 5
+      idleTimeout: 30000
+      maxLifetime: 2000000
+      connectionTimeout: 30000
+#    driver-class-name: "org.postgresql.Driver"
+  ## Hibernate Properties
+  # The SQL dialect makes Hibernate generate better SQL for the chosen database
+  jpa:
+    properties:
+      hibernate:
+        dialect: "org.hibernate.dialect.PostgreSQL9Dialect"
+    hibernate:
+      ddl-auto: update
+  rabbitmq:
+    username: guest
+    password: guest
+    addresses: localhost
+    port: 5672
+    template:
+      default-receive-queue: TestQueue
+
+hibernate:
+  hikari:
+   minimumIdle: 5
+   maximumPoolSize: 10
+   idleTimeout: 30000
+
+
+
+surena:
+  mq:
+    host: localhost
+    port: 5672
+    queue-manager: CENTRAL
+    channel: SYSTEM.DEF.SVRCONN
+    userName: mqm
+    password: surenamqm
+  receiver:
+    queue: receiver
+  sender:
+    queue: sender

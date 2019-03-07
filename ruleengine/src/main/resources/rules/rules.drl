@@ -1,0 +1,26 @@
+package rules;
+import ir.itsurena.base.secondlibraryservicedto.dto.AccountDto
+import ir.itsurena.base.ruleengineservicedto.util.RuleErrorCode;
+dialect  "mvel"
+
+rule "1"
+    salience 2
+    agenda-group "FIRST_LIBRARY"
+
+   when
+        $account : AccountDto( balance < 100 )
+   then
+        $account.setMessage(RuleErrorCode.ACCOUNT_LOW_BALANCE.toString());
+
+end
+
+
+rule "2"
+   salience 1
+   agenda-group "FIRST_LIBRARY"
+
+   when
+        $account : AccountDto( balance > 100 )
+   then
+        $account.setMessage(RuleErrorCode.ACCOUNT_HIGH_BALANCE.toString());
+end

@@ -1,0 +1,15 @@
+
+${AnsiColor.BRIGHT_BLACK}        ___          ___          ___          ___          ___          ___
+${AnsiColor.BRIGHT_BLACK}       /\  \        /\__\        /\  \        /\  \        /\__\        /\  \
+${AnsiColor.BRIGHT_BLACK}      /::\  \      /:/  /       /::\  \      /::\  \      /::|  |      /::\  \
+${AnsiColor.BRIGHT_BLACK}     /:/\ \  \    /:/  /       /:/\:\  \    /:/\:\  \    /:|:|  |     /:/\:\  \
+${AnsiColor.BRIGHT_BLACK}    _\:\~\ \  \  /:/  /  ___  /::\~\:\  \  /::\~\:\  \  /:/|:|  |__  /::\~\:\  \
+${AnsiColor.BRIGHT_BLACK}   /\ \:\ \ \__\/:/__/  /\__\/:/\:\ \:\__\/:/\:\ \:\__\/:/ |:| /\__\/:/\:\ \:\__\
+${AnsiColor.BRIGHT_BLACK}   \:\ \:\ \/__/\:\  \ /:/  /\/_|::\/:/  /\:\~\:\ \/__/\/__|:|/:/  /\/__\:\/:/  /
+${AnsiColor.BRIGHT_BLACK}    \:\ \:\__\   \:\  /:/  /    |:|::/  /  \:\ \:\__\      |:/:/  /      \::/  /
+${AnsiColor.BRIGHT_BLACK}     \:\/:/  /    \:\/:/  /     |:|\/__/    \:\ \/__/      |::/  /       /:/  /
+${AnsiColor.BRIGHT_BLACK}      \::/  /      \::/  /      |:|  |       \:\__\        /:/  /       /:/  /
+${AnsiColor.BRIGHT_BLACK}       \/__/        \/__/        \|__|        \/__/        \/__/        \/__/
+
+${AnsiColor.BRIGHT_BLUE}:: Template project :: Running Spring Boot ${spring-boot.version} ::
+:: http://itsurena.ir/ ::${AnsiColor.DEFAULT}

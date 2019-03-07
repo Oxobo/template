@@ -1,0 +1,10 @@
+spring:
+    application:
+        name: base
+    profiles:
+        active: dev, swagger
+    messages:
+        basename: i18n/messages
+
+
+

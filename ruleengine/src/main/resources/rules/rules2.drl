@@ -1,0 +1,30 @@
+package rules;
+import ir.itsurena.base.ruleengineservicedto.dto.ModelRuleEngineDto
+import ir.itsurena.base.ruleengineservicedto.util.RuleErrorCode;
+
+dialect  "mvel"
+
+rule "3"
+    agenda-group "THIRD_LIBRARY"
+
+   when
+        $models : ModelRuleEngineDto(balance < 100)
+   then
+        $models.setMessage(RuleErrorCode.ACCOUNT_LOW_BALANCE.toString());
+
+end
+
+
+
+rule "44"
+    agenda-group "FOURTH_LIBRARY"
+
+   when
+        $models : ModelRuleEngineDto(balance > 100)
+   then
+        $models.setMessage(RuleErrorCode.ACCOUNT_HIGH_BALANCE.toString());
+
+end
+
+
+
