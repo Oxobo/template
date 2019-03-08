@@ -1,6 +1,6 @@
 package rules;
-import ir.itsurena.base.ruleengineservicedto.dto.ModelRuleEngineDto
-import ir.itsurena.base.ruleengineservicedto.util.RuleErrorCode;
+import nl.tue.base.ruleengineservicedto.dto.ModelRuleEngineDto
+import nl.tue.base.ruleengineservicedto.util.RuleErrorCode;
 
 dialect  "mvel"
 

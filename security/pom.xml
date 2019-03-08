@@ -6,11 +6,11 @@
 
     <parent>
         <artifactId>base</artifactId>
-        <groupId>ir.itsurena</groupId>
+        <groupId>nl.tue</groupId>
         <version>0.0.2-SNAPSHOT</version>
     </parent>
 
-    <groupId>ir.itsurena.base</groupId>
+    <groupId>nl.tue.base</groupId>
     <artifactId>security</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>security</name>
@@ -18,7 +18,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>ir.itsurena.base</groupId>
+            <groupId>nl.tue.base</groupId>
             <artifactId>core</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>

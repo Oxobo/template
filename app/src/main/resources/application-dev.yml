@@ -39,14 +39,14 @@ hibernate:
 
 
 
-surena:
+tue:
   mq:
     host: localhost
     port: 5672
     queue-manager: CENTRAL
     channel: SYSTEM.DEF.SVRCONN
     userName: mqm
-    password: surenamqm
+    password: guestmqm
   receiver:
     queue: receiver
   sender:

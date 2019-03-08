@@ -1,29 +1,29 @@
 swagger: "2.0"
 info:
-  description: "This is a sample server Petstore server.  You can find out more about     Swagger at [http://itsurena.ir](http://itsurena.ir) or on [irc.freenode.net, #itsurena](http://itsurena.ir/irc/).      For this sample, you can use the api key `special-key` to test the authorization     filters."
+  description: "This is a sample server Petstore server.  You can find out more about     Swagger at [http://tue.nl](http://tue.nl) or on [irc.freenode.net, #tue](http://tue.nl/irc/).      For this sample, you can use the api key `special-key` to test the authorization     filters."
   version: "1.0.0"
   title: "Swagger Petstore"
-  termsOfService: "http://itsurena.ir/terms/"
+  termsOfService: "http://tue.nl/terms/"
   contact:
-    email: "apiteam@itsurena.ir"
+    email: "apiteam@tue.nl"
   license:
     name: "Apache 2.0"
     url: "http://www.apache.org/licenses/LICENSE-2.0.html"
-host: "petstore.itsurena.ir"
+host: "petstore.tue.nl"
 basePath: "/v2"
 tags:
 - name: "pet"
   description: "Everything about your Pets"
   externalDocs:
     description: "Find out more"
-    url: "http://itsurena.ir"
+    url: "http://tue.nl"
 - name: "store"
   description: "Access to Petstore orders"
 - name: "user"
   description: "Operations about user"
   externalDocs:
     description: "Find out more about our store"
-    url: "http://itsurena.ir"
+    url: "http://tue.nl"
 schemes:
 - "https"
 - "http"
@@ -567,7 +567,7 @@ paths:
 securityDefinitions:
   petstore_auth:
     type: "oauth2"
-    authorizationUrl: "http://petstore.itsurena.ir/oauth/dialog"
+    authorizationUrl: "http://petstore.tue.nl/oauth/dialog"
     flow: "implicit"
     scopes:
       write:pets: "modify pets in your account"
@@ -697,4 +697,4 @@ definitions:
         type: "string"
 externalDocs:
   description: "Find out more about Swagger"
-  url: "http://itsurena.ir"
+  url: "http://tue.nl"

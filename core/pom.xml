@@ -4,12 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>ir.itsurena</groupId>
+        <groupId>nl.tue</groupId>
         <artifactId>base</artifactId>
         <version>0.0.2-SNAPSHOT</version>
     </parent>
 
-    <groupId>ir.itsurena.base</groupId>
+    <groupId>nl.tue.base</groupId>
     <artifactId>core</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>

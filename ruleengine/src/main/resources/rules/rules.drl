@@ -1,6 +1,6 @@
 package rules;
-import ir.itsurena.base.secondlibraryservicedto.dto.AccountDto
-import ir.itsurena.base.ruleengineservicedto.util.RuleErrorCode;
+import nl.tue.base.secondlibraryservicedto.dto.AccountDto
+import nl.tue.base.ruleengineservicedto.util.RuleErrorCode;
 dialect  "mvel"
 
 rule "1"

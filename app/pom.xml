@@ -4,12 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>ir.itsurena</groupId>
+        <groupId>nl.tue</groupId>
         <artifactId>base</artifactId>
         <version>0.0.2-SNAPSHOT</version>
     </parent>
 
-    <groupId>ir.itsurena.base</groupId>
+    <groupId>nl.tue.base</groupId>
     <artifactId>app</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
@@ -17,37 +17,37 @@
 
     <dependencies>
         <dependency>
-            <groupId>ir.itsurena.base</groupId>
+            <groupId>nl.tue.base</groupId>
             <artifactId>core</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>ir.itsurena.base</groupId>
-            <artifactId>sima</artifactId>
+            <groupId>nl.tue.base</groupId>
+            <artifactId>mq</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>ir.itsurena.base</groupId>
-            <artifactId>simaservicedto</artifactId>
+            <groupId>nl.tue.base</groupId>
+            <artifactId>mqservicedto</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>ir.itsurena.base</groupId>
-            <artifactId>simaservice</artifactId>
+            <groupId>nl.tue.base</groupId>
+            <artifactId>mqservice</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>ir.itsurena.base</groupId>
+            <groupId>nl.tue.base</groupId>
             <artifactId>baseinfo</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>ir.itsurena.base</groupId>
+            <groupId>nl.tue.base</groupId>
             <artifactId>ruleengine</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 <!--        <dependency>
-            <groupId>ir.itsurena.base</groupId>
+            <groupId>nl.tue.base</groupId>
             <artifactId>customer</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>-->

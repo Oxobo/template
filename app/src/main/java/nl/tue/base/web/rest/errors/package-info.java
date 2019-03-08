@@ -1,0 +1,1 @@
+package nl.tue.base.web.rest.errors;

@@ -10,19 +10,22 @@
         <relativePath />
     </parent>
 
-    <groupId>ir.itsurena</groupId>
+    <groupId>nl.tue</groupId>
     <artifactId>base</artifactId>
     <version>0.0.2-SNAPSHOT</version>
-    <name>Surena base application</name>
+    <name>ST PDEng base application</name>
     <packaging>pom</packaging>
-    <description>Surena base application</description>
+    <description>This is a template code for
+                Software Technology PDEng program
+                at Eindhoven University of Technology
+    </description>
 
     <modules>
         <module>app</module>
         <module>core</module>
-        <module>sima</module>
-        <module>simaservice</module>
-        <module>simaservicedto</module>
+        <module>mq</module>
+        <module>mqservice</module>
+        <module>mqservicedto</module>
         <module>baseinfo</module>
         <module>baseinfoservice</module>
         <module>baseinfoservicedto</module>

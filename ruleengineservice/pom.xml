@@ -6,19 +6,19 @@
 
     <parent>
         <artifactId>base</artifactId>
-        <groupId>ir.itsurena</groupId>
+        <groupId>nl.tue</groupId>
         <version>0.0.2-SNAPSHOT</version>
     </parent>
 
     <artifactId>ruleengineservice</artifactId>
-    <groupId>ir.itsurena.base</groupId>
+    <groupId>nl.tue.base</groupId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
     <description>Rule Engine Service Module</description>
 
     <dependencies>
         <dependency>
-            <groupId>ir.itsurena.base</groupId>
+            <groupId>nl.tue.base</groupId>
             <artifactId>core</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
@@ -33,7 +33,7 @@
             <version>7.16.0.Final</version>
         </dependency>
         <dependency>
-            <groupId>ir.itsurena.base</groupId>
+            <groupId>nl.tue.base</groupId>
             <artifactId>ruleengineservicedto</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
