@@ -32,11 +32,6 @@
             <artifactId>kie-spring</artifactId>
             <version>7.16.0.Final</version>
         </dependency>
-        <dependency>
-            <groupId>nl.tue.base</groupId>
-            <artifactId>ruleengineservicedto</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
     </dependencies>
 
 </project>

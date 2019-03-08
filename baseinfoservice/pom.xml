@@ -16,11 +16,7 @@
     <description>Base Info Service</description>
 
     <dependencies>
-        <dependency>
-            <groupId>nl.tue.base</groupId>
-            <artifactId>baseinfoservicedto</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
+
     </dependencies>
 
 </project>

@@ -1,15 +1,43 @@
 
-${AnsiColor.BRIGHT_BLACK}
-${AnsiColor.BRIGHT_BLACK}
-${AnsiColor.BRIGHT_BLACK}   _   _                              _             __  __           _           _   _
-${AnsiColor.BRIGHT_BLACK}  | | | |   ___    ___   ___    ___  (_)  _ __     |  \/  |   __ _  | |__     __| | (_)   __ _   _ __
-${AnsiColor.BRIGHT_BLACK}  | |_| |  / _ \  / __| / __|  / _ \ | | | '_ \    | |\/| |  / _` | | '_ \   / _` | | |  / _` | | '_ \
-${AnsiColor.BRIGHT_BLACK}  |  _  | | (_) | \__ \ \__ \ |  __/ | | | | | |   | |  | | | (_| | | | | | | (_| | | | | (_| | | | | |
-${AnsiColor.BRIGHT_BLACK}  |_| |_|  \___/  |___/ |___/  \___| |_| |_| |_|   |_|  |_|  \__,_| |_| |_|  \__,_| |_|  \__,_| |_| |_|
-${AnsiColor.BRIGHT_BLACK}
-${AnsiColor.BRIGHT_BLACK}
-${AnsiColor.BRIGHT_BLACK}
-${AnsiColor.BRIGHT_BLACK}
+${AnsiColor.RED}
+${AnsiColor.RED}   HHHHHHHHH     HHHHHHHHH                                                                         iiii
+${AnsiColor.RED}   H:::::::H     H:::::::H                                                                        i::::i
+${AnsiColor.RED}   H:::::::H     H:::::::H                                                                         iiii
+${AnsiColor.RED}   HH::::::H     H::::::HH
+${AnsiColor.RED}     H:::::H     H:::::H     ooooooooooo       ssssssssss       ssssssssss       eeeeeeeeeeee    iiiiiii nnnn  nnnnnnnn
+${AnsiColor.RED}     H:::::H     H:::::H   oo:::::::::::oo   ss::::::::::s    ss::::::::::s    ee::::::::::::ee  i:::::i n:::nn::::::::nn
+${AnsiColor.WHITE}     H::::::HHHHH::::::H  o:::::::::::::::oss:::::::::::::s ss:::::::::::::s  e::::::eeeee:::::ee i::::i n::::::::::::::nn
+${AnsiColor.WHITE}     H:::::::::::::::::H  o:::::ooooo:::::os::::::ssss:::::ss::::::ssss:::::se::::::e     e:::::e i::::i nn:::::::::::::::n
+${AnsiColor.WHITE}     H:::::::::::::::::H  o::::o     o::::o s:::::s  ssssss  s:::::s  ssssss e:::::::eeeee::::::e i::::i   n:::::nnnn:::::n
+${AnsiColor.WHITE}     H::::::HHHHH::::::H  o::::o     o::::o   s::::::s         s::::::s      e:::::::::::::::::e  i::::i   n::::n    n::::n
+${AnsiColor.BLUE}     H:::::H     H:::::H  o::::o     o::::o      s::::::s         s::::::s   e::::::eeeeeeeeeee   i::::i   n::::n    n::::n
+${AnsiColor.BLUE}     H:::::H     H:::::H  o::::o     o::::ossssss   s:::::s ssssss   s:::::s e:::::::e            i::::i   n::::n    n::::n
+${AnsiColor.BLUE}   HH::::::H     H::::::HHo:::::ooooo:::::os:::::ssss::::::ss:::::ssss::::::se::::::::e          i::::::i  n::::n    n::::n
+${AnsiColor.BLUE}   H:::::::H     H:::::::Ho:::::::::::::::os::::::::::::::s s::::::::::::::s  e::::::::eeeeeeee  i::::::i  n::::n    n::::n
+${AnsiColor.BLUE}   H:::::::H     H:::::::H oo:::::::::::oo  s:::::::::::ss   s:::::::::::ss    ee:::::::::::::e  i::::::i  n::::n    n::::n
+${AnsiColor.BLUE}   HHHHHHHHH     HHHHHHHHH   ooooooooooo     sssssssssss      sssssssssss        eeeeeeeeeeeeee  iiiiiiii  nnnnnn    nnnnnn
+${AnsiColor.BLUE}
+
+${AnsiColor.RED}                                                                                   dddddddd                                                                                                                                     
+${AnsiColor.RED}  MMMMMMMM               MMMMMMMM                  hhhhhhh                         d::::::d  iiii                                                                                                                             
+${AnsiColor.RED}  M:::::::M             M:::::::M                  h:::::h                         d::::::d i::::i                                           
+${AnsiColor.RED}  M::::::::M           M::::::::M                  h:::::h                         d::::::d  iiii                                            
+${AnsiColor.RED}  M:::::::::M         M:::::::::M                  h:::::h                         d:::::d                                                   
+${AnsiColor.RED}  M::::::::::M       M::::::::::M  aaaaaaaaaaaaa    h::::h hhhhh           ddddddddd:::::d iiiiiii   aaaaaaaaaaaaa   nnnn  nnnnnnnn          
+${AnsiColor.RED}  M:::::::::::M     M:::::::::::M  a::::::::::::a   h::::hh:::::hhh      dd::::::::::::::d i:::::i   a::::::::::::a  n:::nn::::::::nn        
+${AnsiColor.WHITE}  M:::::::M::::M   M::::M:::::::M  aaaaaaaaa:::::a  h::::::::::::::hh   d::::::::::::::::d  i::::i   aaaaaaaaa:::::a n::::::::::::::nn
+${AnsiColor.WHITE}  M::::::M M::::M M::::M M::::::M           a::::a  h:::::::hhh::::::h d:::::::ddddd:::::d  i::::i            a::::a nn:::::::::::::::n
+${AnsiColor.WHITE}  M::::::M  M::::M::::M  M::::::M    aaaaaaa:::::a  h::::::h   h::::::hd::::::d    d:::::d  i::::i     aaaaaaa:::::a   n:::::nnnn:::::n
+${AnsiColor.WHITE}  M::::::M   M:::::::M   M::::::M  aa::::::::::::a  h:::::h     h:::::hd:::::d     d:::::d  i::::i   aa::::::::::::a   n::::n    n::::n
+${AnsiColor.BLUE} M::::::M    M:::::M    M::::::M a::::aaaa::::::a  h:::::h     h:::::hd:::::d     d:::::d  i::::i  a::::aaaa::::::a   n::::n    n::::n        
+${AnsiColor.BLUE} M::::::M     MMMMM     M::::::Ma::::a    a:::::a  h:::::h     h:::::hd:::::d     d:::::d  i::::i a::::a    a:::::a   n::::n    n::::n       
+${AnsiColor.BLUE} M::::::M               M::::::Ma::::a    a:::::a  h:::::h     h:::::hd::::::ddddd::::::ddi::::::ia::::a    a:::::a   n::::n    n::::n       
+${AnsiColor.BLUE} M::::::M               M::::::Ma:::::aaaa::::::a  h:::::h     h:::::h d:::::::::::::::::di::::::ia:::::aaaa::::::a   n::::n    n::::n       
+${AnsiColor.BLUE} M::::::M               M::::::M a::::::::::aa:::a h:::::h     h:::::h  d:::::::::ddd::::di::::::i a::::::::::aa:::a  n::::n    n::::n       
+${AnsiColor.BLUE} MMMMMMMM               MMMMMMMM  aaaaaaaaaa  aaaa hhhhhhh     hhhhhhh   ddddddddd   dddddiiiiiiii  aaaaaaaaaa  aaaa  nnnnnn    nnnnnn       
+${AnsiColor.BLUE}                                                                                                                                             
+
+
 
 ${AnsiColor.BRIGHT_BLUE}:: Template project :: Running Spring Boot ${spring-boot.version} ::
 :: http://tue.nl/ ::${AnsiColor.DEFAULT}

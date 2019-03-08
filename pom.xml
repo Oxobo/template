@@ -25,16 +25,12 @@
         <module>core</module>
         <module>mq</module>
         <module>mqservice</module>
-        <module>mqservicedto</module>
         <module>baseinfo</module>
         <module>baseinfoservice</module>
-        <module>baseinfoservicedto</module>
         <module>ruleengine</module>
         <module>ruleengineservice</module>
-        <module>ruleengineservicedto</module>
         <module>customer</module>
         <module>customerservice</module>
-        <module>customerservicedto</module>
         <module>security</module>
     </modules>
 

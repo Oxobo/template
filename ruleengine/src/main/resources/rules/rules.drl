@@ -1,5 +1,6 @@
+/*
 package rules;
-import nl.tue.base.secondlibraryservicedto.dto.AccountDto
+//import nl.tue.base.secondlibraryservicedto.dto.AccountDto
 import nl.tue.base.ruleengineservicedto.util.RuleErrorCode;
 dialect  "mvel"
 
@@ -10,7 +11,6 @@ rule "1"
    when
         $account : AccountDto( balance < 100 )
    then
-        $account.setMessage(RuleErrorCode.ACCOUNT_LOW_BALANCE.toString());
 
 end
 
@@ -23,4 +23,4 @@ rule "2"
         $account : AccountDto( balance > 100 )
    then
         $account.setMessage(RuleErrorCode.ACCOUNT_HIGH_BALANCE.toString());
-end
+end*/
