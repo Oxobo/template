@@ -11,9 +11,9 @@
     </parent>
 
     <groupId>nl.tue</groupId>
-    <artifactId>base</artifactId>
+    <artifactId>code-template</artifactId>
     <version>0.0.2-SNAPSHOT</version>
-    <name>ST PDEng base application</name>
+    <name>ST PDEng application</name>
     <packaging>pom</packaging>
     <description>This is a template code for
                 Software Technology PDEng program

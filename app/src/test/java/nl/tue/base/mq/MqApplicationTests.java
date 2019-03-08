@@ -3,7 +3,7 @@ package nl.tue.base.mq;
 import nl.tue.base.dto.library.PrincipalType;
 import nl.tue.base.dto.request.PingRequestType;
 import nl.tue.base.mq.dto.xml.general.MqObjectFactory;
-import nl.tue.base.mq.jms.MessageSender;
+import nl.tue.base.mq.jms.RabbitMQSender;
 import nl.tue.base.mq.request.PingRequestService;
 import nl.tue.base.mq.service.LogService;
 import nl.tue.base.mq.util.XmlParser;
@@ -30,8 +30,9 @@ public class MqApplicationTests {
 
     @Autowired
     XmlParser xmlParser;
+
     @Autowired
-    private MessageSender messageSender;
+    private RabbitMQSender rabbitMQSender;
 
     @Autowired
     PingRequestService pingRequestService;
@@ -169,10 +170,9 @@ public class MqApplicationTests {
         }
     }
 
-
     @Test
-    public void testSendMessage() {
-        messageSender.send("helo jms", "34");
+    public void testSendMessageToRabbitMQ() {
+        rabbitMQSender.send("helo from jmsto rabit");
     }
 
 }

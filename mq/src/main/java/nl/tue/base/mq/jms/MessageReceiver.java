@@ -20,14 +20,14 @@ public class MessageReceiver implements Runnable {
     @Autowired
     private MessageReceiverParameter parameter;
     private final Environment propertyUtil;
-    private final ConnectionFactory factory;
+//    private final ConnectionFactory factory;
     private final XmlParser xmlParser;
 
 
     @Autowired
     public MessageReceiver(MessageReceiverParameter parameter) {
 
-        this.factory = parameter.getFactory();
+//        this.factory = parameter.getFactory();
         this.propertyUtil = parameter.getPropertyUtil();
         this.xmlParser = parameter.getXmlParser();
 
