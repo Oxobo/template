@@ -89,13 +89,10 @@ public class XmlParser {
         marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
         marshaller.setProperty(Marshaller.JAXB_FRAGMENT, Boolean.TRUE);
 
-        QName rootElementName = new QName("http://www.w3.org/2001/XMLSchema",
-                object.getClass().getSimpleName(),"");
-        JAXBElement<AbstractRequestType> rootElement = new JAXBElement<>(rootElementName,AbstractRequestType.class,object);
 
         StringWriter writer = new StringWriter();
 
-        marshaller.marshal(rootElement, writer);
+        marshaller.marshal(object, writer);
 
         return String.valueOf(writer);
     }

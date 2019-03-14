@@ -172,7 +172,7 @@ public class MqApplicationTests {
 
     @Test
     public void testSendMessageToRabbitMQ() {
-        rabbitMQSender.send("helo from jmsto rabit");
+        rabbitMQSender.send("helo from jms to rabitt mQ");
     }
 
 }
