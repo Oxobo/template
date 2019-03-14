@@ -14,22 +14,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class MessageReceiverParameter {
 
-//    @Autowired
-//    private ConnectionFactory factory;
 
     @Autowired
     private Environment propertyUtil;
 
     @Autowired
     private XmlParser xmlParser;
-
-//    public ConnectionFactory getFactory() {
-//        return factory;
-//    }
-//
-//    public void setFactory(ConnectionFactory factory) {
-//        this.factory = factory;
-//    }
 
     public Environment getPropertyUtil() {
         return propertyUtil;

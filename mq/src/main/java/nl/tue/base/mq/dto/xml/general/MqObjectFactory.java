@@ -24,114 +24,36 @@ public class MqObjectFactory {
 
     private static final String NAME_SPACE_URI = "http://modernisc.com/api/csd";
 
-    private static final QName _GetSalesInterestResponse_QNAME = new QName(NAME_SPACE_URI, "GetSalesInterestResponse");
-    private static final QName _ApproveRedemptionSecuritiesRequest_QNAME = new QName(NAME_SPACE_URI, "ApproveRedemptionSecuritiesRequest");
-    private static final QName _GetResaleInterestResponse_QNAME = new QName(NAME_SPACE_URI, "GetResaleInterestResponse");
-    private static final QName _BlockPartyRequest_QNAME = new QName(NAME_SPACE_URI, "BlockPartyRequest");
     private static final QName _UpdatePersonResponse_QNAME = new QName(NAME_SPACE_URI, "UpdatePersonResponse");
     private static final QName _CreatePersonResponse_QNAME = new QName(NAME_SPACE_URI, "CreatePersonResponse");
-    private static final QName _PartialBlockAccountResponse_QNAME = new QName(NAME_SPACE_URI, "PartialBlockAccountResponse");
     private static final QName _PingResponse_QNAME = new QName(NAME_SPACE_URI, "PingResponse");
     private static final QName _UnblockAccountRequest_QNAME = new QName(NAME_SPACE_URI, "UnblockAccountRequest");
-    private static final QName _UnblockPartyRequest_QNAME = new QName(NAME_SPACE_URI, "UnblockPartyRequest");
-    private static final QName _ApproveResaleSecuritiesRequest_QNAME = new QName(NAME_SPACE_URI, "ApproveResaleSecuritiesRequest");
-    private static final QName _BlockPartyResponse_QNAME = new QName(NAME_SPACE_URI, "BlockPartyResponse");
     private static final QName _PingRequest_QNAME = new QName(NAME_SPACE_URI, "PingRequest");
     private static final QName _UpdateOrganizationResponse_QNAME = new QName(NAME_SPACE_URI, "UpdateOrganizationResponse");
-    private static final QName _PartialUnblockAccountRequest_QNAME = new QName(NAME_SPACE_URI, "PartialUnblockAccountRequest");
-    private static final QName _GetSecuritiesForTransferResponse_QNAME = new QName(NAME_SPACE_URI, "GetSecuritiesForTransferResponse");
-    private static final QName _GetSecuritiesForRedemptionRequest_QNAME = new QName(NAME_SPACE_URI, "GetSecuritiesForRedemptionRequest");
     private static final QName _CreateOrganizationRequest_QNAME = new QName(NAME_SPACE_URI, "CreateOrganizationRequest");
     private static final QName _BlockAccountResponse_QNAME = new QName(NAME_SPACE_URI, "BlockAccountResponse");
-    private static final QName _UnblockPartyResponse_QNAME = new QName(NAME_SPACE_URI, "UnblockPartyResponse");
-    private static final QName _GetSecuritiesCodesForRedemptionRequest_QNAME = new QName(NAME_SPACE_URI, "GetSecuritiesCodesForRedemptionRequest");
-    private static final QName _CancelRedemptionSecuritiesResponse_QNAME = new QName(NAME_SPACE_URI, "CancelRedemptionSecuritiesResponse");
-    private static final QName _GetAccountsRequest_QNAME = new QName(NAME_SPACE_URI, "GetAccountsRequest");
-    private static final QName _GetSecuritiesCodesForSaleResponse_QNAME = new QName(NAME_SPACE_URI, "GetSecuritiesCodesForSaleResponse");
-    private static final QName _GetSecuritiesCouponsDateRequest_QNAME = new QName(NAME_SPACE_URI, "GetSecuritiesCouponsDateRequest");
-    private static final QName _ApproveTransferSecuritiesResponse_QNAME = new QName(NAME_SPACE_URI, "ApproveTransferSecuritiesResponse");
-    private static final QName _CancelResaleSecuritiesRequest_QNAME = new QName(NAME_SPACE_URI, "CancelResaleSecuritiesRequest");
     private static final QName _GetOrganizationByIdentifierResponse_QNAME = new QName(NAME_SPACE_URI, "GetOrganizationByIdentifierResponse");
-    private static final QName _GetSecuritiesCodesForSaleRequest_QNAME = new QName(NAME_SPACE_URI, "GetSecuritiesCodesForSaleRequest");
-    private static final QName _TransferSecuritiesRequest_QNAME = new QName(NAME_SPACE_URI, "TransferSecuritiesRequest");
     private static final QName _GetOrganizationsByNameRequest_QNAME = new QName(NAME_SPACE_URI, "GetOrganizationsByNameRequest");
     private static final QName _GetPersonsByNameRequest_QNAME = new QName(NAME_SPACE_URI, "GetPersonsByNameRequest");
     private static final QName _CreatePersonRequest_QNAME = new QName(NAME_SPACE_URI, "CreatePersonRequest");
-    private static final QName _CancelRedemptionSecuritiesRequest_QNAME = new QName(NAME_SPACE_URI, "CancelRedemptionSecuritiesRequest");
-    private static final QName _GetSecuritiesCouponsDateResponse_QNAME = new QName(NAME_SPACE_URI, "GetSecuritiesCouponsDateResponse");
-    private static final QName _GetSecuritiesCodesForResaleRequest_QNAME = new QName(NAME_SPACE_URI, "GetSecuritiesCodesForResaleRequest");
-    private static final QName _TransferSecuritiesResponse_QNAME = new QName(NAME_SPACE_URI, "TransferSecuritiesResponse");
-    private static final QName _GetRedemptionInterestRequest_QNAME = new QName(NAME_SPACE_URI, "GetRedemptionInterestRequest");
-    private static final QName _GetSecuritiesForResaleResponse_QNAME = new QName(NAME_SPACE_URI, "GetSecuritiesForResaleResponse");
-    private static final QName _GetSecuritiesForRedemptionResponse_QNAME = new QName(NAME_SPACE_URI, "GetSecuritiesForRedemptionResponse");
-    private static final QName _PartialUnblockAccountResponse_QNAME = new QName(NAME_SPACE_URI, "PartialUnblockAccountResponse");
-    private static final QName _ApproveSaleSecuritiesRequest_QNAME = new QName(NAME_SPACE_URI, "ApproveSaleSecuritiesRequest");
-    private static final QName _GetSecuritiesForSaleResponse_QNAME = new QName(NAME_SPACE_URI, "GetSecuritiesForSaleResponse");
     private static final QName _GetOrganizationByIdentifierRequest_QNAME = new QName(NAME_SPACE_URI, "GetOrganizationByIdentifierRequest");
     private static final QName _UpdatePersonRequest_QNAME = new QName(NAME_SPACE_URI, "UpdatePersonRequest");
-    private static final QName _GetRedemptionInterestResponse_QNAME = new QName(NAME_SPACE_URI, "GetRedemptionInterestResponse");
-    private static final QName _GetAccountsResponse_QNAME = new QName(NAME_SPACE_URI, "GetAccountsResponse");
-    private static final QName _ResaleSecuritiesRequest_QNAME = new QName(NAME_SPACE_URI, "ResaleSecuritiesRequest");
     private static final QName _UnblockAccountResponse_QNAME = new QName(NAME_SPACE_URI, "UnblockAccountResponse");
-    private static final QName _ReverseTransactionRequest_QNAME = new QName(NAME_SPACE_URI, "ReverseTransactionRequest");
-    private static final QName _CancelSaleSecuritiesResponse_QNAME = new QName(NAME_SPACE_URI, "CancelSaleSecuritiesResponse");
-    private static final QName _RedemptionSecuritiesRequest_QNAME = new QName(NAME_SPACE_URI, "RedemptionSecuritiesRequest");
-    private static final QName _GetSalesInterestRequest_QNAME = new QName(NAME_SPACE_URI, "GetSalesInterestRequest");
-    private static final QName _GetAllocatedSecuritiesResponse_QNAME = new QName(NAME_SPACE_URI, "GetAllocatedSecuritiesResponse");
-    private static final QName _ResaleSecuritiesResponse_QNAME = new QName(NAME_SPACE_URI, "ResaleSecuritiesResponse");
-    private static final QName _GetSecuritiesCodesForTransferResponse_QNAME = new QName(NAME_SPACE_URI, "GetSecuritiesCodesForTransferResponse");
-    private static final QName _GetSecuritiesCodesForRedemptionResponse_QNAME = new QName(NAME_SPACE_URI, "GetSecuritiesCodesForRedemptionResponse");
-    private static final QName _ReverseTransactionResponse_QNAME = new QName(NAME_SPACE_URI, "ReverseTransactionResponse");
     private static final QName _GetPersonByIdentifierRequest_QNAME = new QName(NAME_SPACE_URI, "GetPersonByIdentifierRequest");
-    private static final QName _GetSecuritiesForSaleRequest_QNAME = new QName(NAME_SPACE_URI, "GetSecuritiesForSaleRequest");
-    private static final QName _SaleSecuritiesRequest_QNAME = new QName(NAME_SPACE_URI, "SaleSecuritiesRequest");
-    private static final QName _GetSecuritiesCodesForTransferRequest_QNAME = new QName(NAME_SPACE_URI, "GetSecuritiesCodesForTransferRequest");
-    private static final QName _CancelResaleSecuritiesResponse_QNAME = new QName(NAME_SPACE_URI, "CancelResaleSecuritiesResponse");
-    private static final QName _GetResaleInterestRequest_QNAME = new QName(NAME_SPACE_URI, "GetResaleInterestRequest");
-    private static final QName _PartialBlockAccountRequest_QNAME = new QName(NAME_SPACE_URI, "PartialBlockAccountRequest");
-    private static final QName _GetAllocatedSecuritiesCodesResponse_QNAME = new QName(NAME_SPACE_URI, "GetAllocatedSecuritiesCodesResponse");
-    private static final QName _CancelTransferSecuritiesRequest_QNAME = new QName(NAME_SPACE_URI, "CancelTransferSecuritiesRequest");
     private static final QName _UpdateOrganizationRequest_QNAME = new QName(NAME_SPACE_URI, "UpdateOrganizationRequest");
-    private static final QName _UpdateIbanRequest_QNAME = new QName(NAME_SPACE_URI, "UpdateIbanRequest");
     private static final QName _GetOrganizationsByNameResponse_QNAME = new QName(NAME_SPACE_URI, "GetOrganizationsByNameResponse");
-    private static final QName _GetAllocatedSecuritiesCodesRequest_QNAME = new QName(NAME_SPACE_URI, "GetAllocatedSecuritiesCodesRequest");
-    private static final QName _GetSecuritiesCodesForResaleResponse_QNAME = new QName(NAME_SPACE_URI, "GetSecuritiesCodesForResaleResponse");
     private static final QName _BlockAccountRequest_QNAME = new QName(NAME_SPACE_URI, "BlockAccountRequest");
-    private static final QName _ApproveRedemptionSecuritiesResponse_QNAME = new QName(NAME_SPACE_URI, "ApproveRedemptionSecuritiesResponse");
     private static final QName _GetPersonByIdentifierResponse_QNAME = new QName(NAME_SPACE_URI, "GetPersonByIdentifierResponse");
-    private static final QName _ApproveSaleSecuritiesResponse_QNAME = new QName(NAME_SPACE_URI, "ApproveSaleSecuritiesResponse");
     private static final QName _CreateOrganizationResponse_QNAME = new QName(NAME_SPACE_URI, "CreateOrganizationResponse");
     private static final QName _GetPersonsByNameResponse_QNAME = new QName(NAME_SPACE_URI, "GetPersonsByNameResponse");
-    private static final QName _CancelSaleSecuritiesRequest_QNAME = new QName(NAME_SPACE_URI, "CancelSaleSecuritiesRequest");
-    private static final QName _GetSecuritiesForResaleRequest_QNAME = new QName(NAME_SPACE_URI, "GetSecuritiesForResaleRequest");
-    private static final QName _ApproveResaleSecuritiesResponse_QNAME = new QName(NAME_SPACE_URI, "ApproveResaleSecuritiesResponse");
-    private static final QName _GetAllocatedSecuritiesRequest_QNAME = new QName(NAME_SPACE_URI, "GetAllocatedSecuritiesRequest");
-    private static final QName _ApproveTransferSecuritiesRequest_QNAME = new QName(NAME_SPACE_URI, "ApproveTransferSecuritiesRequest");
-    private static final QName _RedemptionSecuritiesResponse_QNAME = new QName(NAME_SPACE_URI, "RedemptionSecuritiesResponse");
-    private static final QName _GetSecuritiesForTransferRequest_QNAME = new QName(NAME_SPACE_URI, "GetSecuritiesForTransferRequest");
-    private static final QName _SaleSecuritiesResponse_QNAME = new QName(NAME_SPACE_URI, "SaleSecuritiesResponse");
-    private static final QName _UpdateIbanResponse_QNAME = new QName(NAME_SPACE_URI, "UpdateIbanResponse");
-    private static final QName _CancelTransferSecuritiesResponse_QNAME = new QName(NAME_SPACE_URI, "CancelTransferSecuritiesResponse");
 
 
     public PingRequestType createPingRequestType() {
         return new PingRequestType();
     }
 
-    public ApproveResaleSecuritiesRequestType createApproveResaleSecuritiesRequestType() {
-        return new ApproveResaleSecuritiesRequestType();
-    }
-
-    public BlockPartyResponseType createBlockPartyResponseType() {
-        return new BlockPartyResponseType();
-    }
-
     public UnblockAccountRequestType createUnblockAccountRequestType() {
         return new UnblockAccountRequestType();
-    }
-
-    public UnblockPartyRequestType createUnblockPartyRequestType() {
-        return new UnblockPartyRequestType();
     }
 
     public PingResponseType createPingResponseType() {
@@ -142,52 +64,8 @@ public class MqObjectFactory {
         return new CreatePersonResponseType();
     }
 
-    public PartialBlockAccountResponseType createPartialBlockAccountResponseType() {
-        return new PartialBlockAccountResponseType();
-    }
-
     public UpdatePersonResponseType createUpdatePersonResponseType() {
         return new UpdatePersonResponseType();
-    }
-
-    public GetResaleInterestResponseType createGetResaleInterestResponseType() {
-        return new GetResaleInterestResponseType();
-    }
-
-    public BlockPartyRequestType createBlockPartyRequestType() {
-        return new BlockPartyRequestType();
-    }
-
-    public ApproveRedemptionSecuritiesRequestType createApproveRedemptionSecuritiesRequestType() {
-        return new ApproveRedemptionSecuritiesRequestType();
-    }
-
-    public GetSalesInterestResponseType createGetSalesInterestResponseType() {
-        return new GetSalesInterestResponseType();
-    }
-
-    public GetSecuritiesForResaleResponseType createGetSecuritiesForResaleResponseType() {
-        return new GetSecuritiesForResaleResponseType();
-    }
-
-    public GetRedemptionInterestRequestType createGetRedemptionInterestRequestType() {
-        return new GetRedemptionInterestRequestType();
-    }
-
-    public TransferSecuritiesResponseType createTransferSecuritiesResponseType() {
-        return new TransferSecuritiesResponseType();
-    }
-
-    public GetSecuritiesCodesForResaleRequestType createGetSecuritiesCodesForResaleRequestType() {
-        return new GetSecuritiesCodesForResaleRequestType();
-    }
-
-    public CancelRedemptionSecuritiesRequestType createCancelRedemptionSecuritiesRequestType() {
-        return new CancelRedemptionSecuritiesRequestType();
-    }
-
-    public GetSecuritiesCouponsDateResponseType createGetSecuritiesCouponsDateResponseType() {
-        return new GetSecuritiesCouponsDateResponseType();
     }
 
     public CreatePersonRequestType createCreatePersonRequestType() {
@@ -206,66 +84,12 @@ public class MqObjectFactory {
         return new GetOrganizationByIdentifierResponseType();
     }
 
-    public GetSecuritiesCodesForSaleRequestType createGetSecuritiesCodesForSaleRequestType() {
-        return new GetSecuritiesCodesForSaleRequestType();
-    }
-
-    public TransferSecuritiesRequestType createTransferSecuritiesRequestType() {
-        return new TransferSecuritiesRequestType();
-    }
-
-    public ApproveTransferSecuritiesResponseType createApproveTransferSecuritiesResponseType() {
-        return new ApproveTransferSecuritiesResponseType();
-    }
-
-    public CancelResaleSecuritiesRequestType createCancelResaleSecuritiesRequestType() {
-        return new CancelResaleSecuritiesRequestType();
-    }
-
-    public GetSecuritiesCouponsDateRequestType createGetSecuritiesCouponsDateRequestType() {
-        return new GetSecuritiesCouponsDateRequestType();
-    }
-
-    public GetSecuritiesCodesForSaleResponseType createGetSecuritiesCodesForSaleResponseType() {
-        return new GetSecuritiesCodesForSaleResponseType();
-    }
-
-    public CancelRedemptionSecuritiesResponseType createCancelRedemptionSecuritiesResponseType() {
-        return new CancelRedemptionSecuritiesResponseType();
-    }
-
-    public GetAccountsRequestType createGetAccountsRequestType() {
-        return new GetAccountsRequestType();
-    }
-
-    public GetSecuritiesCodesForRedemptionRequestType createGetSecuritiesCodesForRedemptionRequestType() {
-        return new GetSecuritiesCodesForRedemptionRequestType();
-    }
-
     public BlockAccountResponseType createBlockAccountResponseType() {
         return new BlockAccountResponseType();
     }
 
-    public UnblockPartyResponseType createUnblockPartyResponseType() {
-        return new UnblockPartyResponseType();
-    }
-
     public CreateOrganizationRequestType createCreateOrganizationRequestType() {
         return new CreateOrganizationRequestType();
-    }
-
-    /**
-     * Create an instance of {@link GetSecuritiesForRedemptionRequestType }
-     */
-    public GetSecuritiesForRedemptionRequestType createGetSecuritiesForRedemptionRequestType() {
-        return new GetSecuritiesForRedemptionRequestType();
-    }
-
-    /**
-     * Create an instance of {@link GetSecuritiesForTransferResponseType }
-     */
-    public GetSecuritiesForTransferResponseType createGetSecuritiesForTransferResponseType() {
-        return new GetSecuritiesForTransferResponseType();
     }
 
     /**
@@ -276,101 +100,10 @@ public class MqObjectFactory {
     }
 
     /**
-     * Create an instance of {@link PartialUnblockAccountRequestType }
-     */
-    public PartialUnblockAccountRequestType createPartialUnblockAccountRequestType() {
-        return new PartialUnblockAccountRequestType();
-    }
-
-    /**
-     * Create an instance of {@link GetSecuritiesCodesForTransferResponseType }
-     */
-    public GetSecuritiesCodesForTransferResponseType createGetSecuritiesCodesForTransferResponseType() {
-        return new GetSecuritiesCodesForTransferResponseType();
-    }
-
-    /**
-     * Create an instance of {@link GetSecuritiesCodesForRedemptionResponseType }
-     */
-    public GetSecuritiesCodesForRedemptionResponseType createGetSecuritiesCodesForRedemptionResponseType() {
-        return new GetSecuritiesCodesForRedemptionResponseType();
-    }
-
-    /**
-     * Create an instance of {@link ReverseTransactionResponseType }
-     */
-    public ReverseTransactionResponseType createReverseTransactionResponseType() {
-        return new ReverseTransactionResponseType();
-    }
-
-    /**
-     * Create an instance of {@link ResaleSecuritiesResponseType }
-     */
-    public ResaleSecuritiesResponseType createResaleSecuritiesResponseType() {
-        return new ResaleSecuritiesResponseType();
-    }
-
-    /**
-     * Create an instance of {@link GetAllocatedSecuritiesResponseType }
-     */
-    public GetAllocatedSecuritiesResponseType createGetAllocatedSecuritiesResponseType() {
-        return new GetAllocatedSecuritiesResponseType();
-    }
-
-    /**
-     * Create an instance of {@link GetSalesInterestRequestType }
-     */
-    public GetSalesInterestRequestType createGetSalesInterestRequestType() {
-        return new GetSalesInterestRequestType();
-    }
-
-    /**
-     * Create an instance of {@link CancelSaleSecuritiesResponseType }
-     */
-    public CancelSaleSecuritiesResponseType createCancelSaleSecuritiesResponseType() {
-        return new CancelSaleSecuritiesResponseType();
-    }
-
-    /**
-     * Create an instance of {@link RedemptionSecuritiesRequestType }
-     */
-    public RedemptionSecuritiesRequestType createRedemptionSecuritiesRequestType() {
-        return new RedemptionSecuritiesRequestType();
-    }
-
-    /**
-     * Create an instance of {@link ResaleSecuritiesRequestType }
-     */
-    public ResaleSecuritiesRequestType createResaleSecuritiesRequestType() {
-        return new ResaleSecuritiesRequestType();
-    }
-
-    /**
      * Create an instance of {@link UnblockAccountResponseType }
      */
     public UnblockAccountResponseType createUnblockAccountResponseType() {
         return new UnblockAccountResponseType();
-    }
-
-    /**
-     * Create an instance of {@link ReverseTransactionRequestType }
-     */
-    public ReverseTransactionRequestType createReverseTransactionRequestType() {
-        return new ReverseTransactionRequestType();
-    }
-
-    /**
-     * Create an instance of {@link GetAccountsResponseType }
-     */
-    public GetAccountsResponseType createGetAccountsResponseType() {
-        return new GetAccountsResponseType();
-    }
-
-    /**
-     * Create an instance of {@link GetRedemptionInterestResponseType }
-     */
-    public GetRedemptionInterestResponseType createGetRedemptionInterestResponseType() {
-        return new GetRedemptionInterestResponseType();
     }
 
     /**
@@ -385,104 +118,6 @@ public class MqObjectFactory {
      */
     public GetOrganizationByIdentifierRequestType createGetOrganizationByIdentifierRequestType() {
         return new GetOrganizationByIdentifierRequestType();
-    }
-
-    /**
-     * Create an instance of {@link GetSecuritiesForSaleResponseType }
-     */
-    public GetSecuritiesForSaleResponseType createGetSecuritiesForSaleResponseType() {
-        return new GetSecuritiesForSaleResponseType();
-    }
-
-    /**
-     * Create an instance of {@link ApproveSaleSecuritiesRequestType }
-     */
-    public ApproveSaleSecuritiesRequestType createApproveSaleSecuritiesRequestType() {
-        return new ApproveSaleSecuritiesRequestType();
-    }
-
-    /**
-     * Create an instance of {@link PartialUnblockAccountResponseType }
-     */
-    public PartialUnblockAccountResponseType createPartialUnblockAccountResponseType() {
-        return new PartialUnblockAccountResponseType();
-    }
-
-    /**
-     * Create an instance of {@link GetSecuritiesForRedemptionResponseType }
-     */
-    public GetSecuritiesForRedemptionResponseType createGetSecuritiesForRedemptionResponseType() {
-        return new GetSecuritiesForRedemptionResponseType();
-    }
-
-    /**
-     * Create an instance of {@link CancelTransferSecuritiesResponseType }
-     */
-    public CancelTransferSecuritiesResponseType createCancelTransferSecuritiesResponseType() {
-        return new CancelTransferSecuritiesResponseType();
-    }
-
-    /**
-     * Create an instance of {@link GetSecuritiesForTransferRequestType }
-     */
-    public GetSecuritiesForTransferRequestType createGetSecuritiesForTransferRequestType() {
-        return new GetSecuritiesForTransferRequestType();
-    }
-
-    /**
-     * Create an instance of {@link SaleSecuritiesResponseType }
-     */
-    public SaleSecuritiesResponseType createSaleSecuritiesResponseType() {
-        return new SaleSecuritiesResponseType();
-    }
-
-    /**
-     * Create an instance of {@link UpdateIbanResponseType }
-     */
-    public UpdateIbanResponseType createUpdateIbanResponseType() {
-        return new UpdateIbanResponseType();
-    }
-
-    /**
-     * Create an instance of {@link RedemptionSecuritiesResponseType }
-     */
-    public RedemptionSecuritiesResponseType createRedemptionSecuritiesResponseType() {
-        return new RedemptionSecuritiesResponseType();
-    }
-
-    /**
-     * Create an instance of {@link GetAllocatedSecuritiesRequestType }
-     */
-    public GetAllocatedSecuritiesRequestType createGetAllocatedSecuritiesRequestType() {
-        return new GetAllocatedSecuritiesRequestType();
-    }
-
-    /**
-     * Create an instance of {@link ApproveTransferSecuritiesRequestType }
-     */
-    public ApproveTransferSecuritiesRequestType createApproveTransferSecuritiesRequestType() {
-        return new ApproveTransferSecuritiesRequestType();
-    }
-
-    /**
-     * Create an instance of {@link ApproveResaleSecuritiesResponseType }
-     */
-    public ApproveResaleSecuritiesResponseType createApproveResaleSecuritiesResponseType() {
-        return new ApproveResaleSecuritiesResponseType();
-    }
-
-    /**
-     * Create an instance of {@link GetSecuritiesForResaleRequestType }
-     */
-    public GetSecuritiesForResaleRequestType createGetSecuritiesForResaleRequestType() {
-        return new GetSecuritiesForResaleRequestType();
-    }
-
-    /**
-     * Create an instance of {@link CancelSaleSecuritiesRequestType }
-     */
-    public CancelSaleSecuritiesRequestType createCancelSaleSecuritiesRequestType() {
-        return new CancelSaleSecuritiesRequestType();
     }
 
     /**
@@ -507,38 +142,10 @@ public class MqObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ApproveSaleSecuritiesResponseType }
-     */
-    public ApproveSaleSecuritiesResponseType createApproveSaleSecuritiesResponseType() {
-        return new ApproveSaleSecuritiesResponseType();
-    }
-
-    /**
-     * Create an instance of {@link ApproveRedemptionSecuritiesResponseType }
-     */
-    public ApproveRedemptionSecuritiesResponseType createApproveRedemptionSecuritiesResponseType() {
-        return new ApproveRedemptionSecuritiesResponseType();
-    }
-
-    /**
      * Create an instance of {@link BlockAccountRequestType }
      */
     public BlockAccountRequestType createBlockAccountRequestType() {
         return new BlockAccountRequestType();
-    }
-
-    /**
-     * Create an instance of {@link GetSecuritiesCodesForResaleResponseType }
-     */
-    public GetSecuritiesCodesForResaleResponseType createGetSecuritiesCodesForResaleResponseType() {
-        return new GetSecuritiesCodesForResaleResponseType();
-    }
-
-    /**
-     * Create an instance of {@link GetAllocatedSecuritiesCodesRequestType }
-     */
-    public GetAllocatedSecuritiesCodesRequestType createGetAllocatedSecuritiesCodesRequestType() {
-        return new GetAllocatedSecuritiesCodesRequestType();
     }
 
     /**
@@ -549,13 +156,6 @@ public class MqObjectFactory {
     }
 
     /**
-     * Create an instance of {@link UpdateIbanRequestType }
-     */
-    public UpdateIbanRequestType createUpdateIbanRequestType() {
-        return new UpdateIbanRequestType();
-    }
-
-    /**
      * Create an instance of {@link UpdateOrganizationRequestType }
      */
     public UpdateOrganizationRequestType createUpdateOrganizationRequestType() {
@@ -563,66 +163,10 @@ public class MqObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetAllocatedSecuritiesCodesResponseType }
-     */
-    public GetAllocatedSecuritiesCodesResponseType createGetAllocatedSecuritiesCodesResponseType() {
-        return new GetAllocatedSecuritiesCodesResponseType();
-    }
-
-    /**
-     * Create an instance of {@link CancelTransferSecuritiesRequestType }
-     */
-    public CancelTransferSecuritiesRequestType createCancelTransferSecuritiesRequestType() {
-        return new CancelTransferSecuritiesRequestType();
-    }
-
-    /**
-     * Create an instance of {@link PartialBlockAccountRequestType }
-     */
-    public PartialBlockAccountRequestType createPartialBlockAccountRequestType() {
-        return new PartialBlockAccountRequestType();
-    }
-
-    /**
-     * Create an instance of {@link CancelResaleSecuritiesResponseType }
-     */
-    public CancelResaleSecuritiesResponseType createCancelResaleSecuritiesResponseType() {
-        return new CancelResaleSecuritiesResponseType();
-    }
-
-    /**
-     * Create an instance of {@link GetResaleInterestRequestType }
-     */
-    public GetResaleInterestRequestType createGetResaleInterestRequestType() {
-        return new GetResaleInterestRequestType();
-    }
-
-    /**
-     * Create an instance of {@link GetSecuritiesCodesForTransferRequestType }
-     */
-    public GetSecuritiesCodesForTransferRequestType createGetSecuritiesCodesForTransferRequestType() {
-        return new GetSecuritiesCodesForTransferRequestType();
-    }
-
-    /**
      * Create an instance of {@link GetPersonByIdentifierRequestType }
      */
     public GetPersonByIdentifierRequestType createGetPersonByIdentifierRequestType() {
         return new GetPersonByIdentifierRequestType();
-    }
-
-    /**
-     * Create an instance of {@link GetSecuritiesForSaleRequestType }
-     */
-    public GetSecuritiesForSaleRequestType createGetSecuritiesForSaleRequestType() {
-        return new GetSecuritiesForSaleRequestType();
-    }
-
-    /**
-     * Create an instance of {@link SaleSecuritiesRequestType }
-     */
-    public SaleSecuritiesRequestType createSaleSecuritiesRequestType() {
-        return new SaleSecuritiesRequestType();
     }
 
     /**
@@ -710,38 +254,6 @@ public class MqObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetSalesInterestResponseType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "GetSalesInterestResponse")
-    public JAXBElement<GetSalesInterestResponseType> createGetSalesInterestResponse(GetSalesInterestResponseType value) {
-        return new JAXBElement<>(_GetSalesInterestResponse_QNAME, GetSalesInterestResponseType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ApproveRedemptionSecuritiesRequestType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "ApproveRedemptionSecuritiesRequest")
-    public JAXBElement<ApproveRedemptionSecuritiesRequestType> createApproveRedemptionSecuritiesRequest(ApproveRedemptionSecuritiesRequestType value) {
-        return new JAXBElement<>(_ApproveRedemptionSecuritiesRequest_QNAME, ApproveRedemptionSecuritiesRequestType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetResaleInterestResponseType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "GetResaleInterestResponse")
-    public JAXBElement<GetResaleInterestResponseType> createGetResaleInterestResponse(GetResaleInterestResponseType value) {
-        return new JAXBElement<>(_GetResaleInterestResponse_QNAME, GetResaleInterestResponseType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BlockPartyRequestType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "BlockPartyRequest")
-    public JAXBElement<BlockPartyRequestType> createBlockPartyRequest(BlockPartyRequestType value) {
-        return new JAXBElement<>(_BlockPartyRequest_QNAME, BlockPartyRequestType.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link UpdatePersonResponseType }{@code >}}
      */
     @XmlElementDecl(namespace = NAME_SPACE_URI, name = "UpdatePersonResponse")
@@ -755,14 +267,6 @@ public class MqObjectFactory {
     @XmlElementDecl(namespace = NAME_SPACE_URI, name = "CreatePersonResponse")
     public JAXBElement<CreatePersonResponseType> createCreatePersonResponse(CreatePersonResponseType value) {
         return new JAXBElement<>(_CreatePersonResponse_QNAME, CreatePersonResponseType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link PartialBlockAccountResponseType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "PartialBlockAccountResponse")
-    public JAXBElement<PartialBlockAccountResponseType> createPartialBlockAccountResponse(PartialBlockAccountResponseType value) {
-        return new JAXBElement<>(_PartialBlockAccountResponse_QNAME, PartialBlockAccountResponseType.class, null, value);
     }
 
     /**
@@ -782,30 +286,6 @@ public class MqObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link UnblockPartyRequestType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "UnblockPartyRequest")
-    public JAXBElement<UnblockPartyRequestType> createUnblockPartyRequest(UnblockPartyRequestType value) {
-        return new JAXBElement<>(_UnblockPartyRequest_QNAME, UnblockPartyRequestType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ApproveResaleSecuritiesRequestType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "ApproveResaleSecuritiesRequest")
-    public JAXBElement<ApproveResaleSecuritiesRequestType> createApproveResaleSecuritiesRequest(ApproveResaleSecuritiesRequestType value) {
-        return new JAXBElement<>(_ApproveResaleSecuritiesRequest_QNAME, ApproveResaleSecuritiesRequestType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BlockPartyResponseType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "BlockPartyResponse")
-    public JAXBElement<BlockPartyResponseType> createBlockPartyResponse(BlockPartyResponseType value) {
-        return new JAXBElement<>(_BlockPartyResponse_QNAME, BlockPartyResponseType.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link PingRequestType }{@code >}}
      */
     @XmlElementDecl(namespace = NAME_SPACE_URI, name = "PingRequest")
@@ -819,30 +299,6 @@ public class MqObjectFactory {
     @XmlElementDecl(namespace = NAME_SPACE_URI, name = "UpdateOrganizationResponse")
     public JAXBElement<UpdateOrganizationResponseType> createUpdateOrganizationResponse(UpdateOrganizationResponseType value) {
         return new JAXBElement<>(_UpdateOrganizationResponse_QNAME, UpdateOrganizationResponseType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link PartialUnblockAccountRequestType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "PartialUnblockAccountRequest")
-    public JAXBElement<PartialUnblockAccountRequestType> createPartialUnblockAccountRequest(PartialUnblockAccountRequestType value) {
-        return new JAXBElement<>(_PartialUnblockAccountRequest_QNAME, PartialUnblockAccountRequestType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetSecuritiesForTransferResponseType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "GetSecuritiesForTransferResponse")
-    public JAXBElement<GetSecuritiesForTransferResponseType> createGetSecuritiesForTransferResponse(GetSecuritiesForTransferResponseType value) {
-        return new JAXBElement<>(_GetSecuritiesForTransferResponse_QNAME, GetSecuritiesForTransferResponseType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetSecuritiesForRedemptionRequestType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "GetSecuritiesForRedemptionRequest")
-    public JAXBElement<GetSecuritiesForRedemptionRequestType> createGetSecuritiesForRedemptionRequest(GetSecuritiesForRedemptionRequestType value) {
-        return new JAXBElement<>(_GetSecuritiesForRedemptionRequest_QNAME, GetSecuritiesForRedemptionRequestType.class, null, value);
     }
 
     /**
@@ -862,91 +318,11 @@ public class MqObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link UnblockPartyResponseType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "UnblockPartyResponse")
-    public JAXBElement<UnblockPartyResponseType> createUnblockPartyResponse(UnblockPartyResponseType value) {
-        return new JAXBElement<>(_UnblockPartyResponse_QNAME, UnblockPartyResponseType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetSecuritiesCodesForRedemptionRequestType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "GetSecuritiesCodesForRedemptionRequest")
-    public JAXBElement<GetSecuritiesCodesForRedemptionRequestType> createGetSecuritiesCodesForRedemptionRequest(GetSecuritiesCodesForRedemptionRequestType value) {
-        return new JAXBElement<>(_GetSecuritiesCodesForRedemptionRequest_QNAME, GetSecuritiesCodesForRedemptionRequestType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link CancelRedemptionSecuritiesResponseType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "CancelRedemptionSecuritiesResponse")
-    public JAXBElement<CancelRedemptionSecuritiesResponseType> createCancelRedemptionSecuritiesResponse(CancelRedemptionSecuritiesResponseType value) {
-        return new JAXBElement<>(_CancelRedemptionSecuritiesResponse_QNAME, CancelRedemptionSecuritiesResponseType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetAccountsRequestType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "GetAccountsRequest")
-    public JAXBElement<GetAccountsRequestType> createGetAccountsRequest(GetAccountsRequestType value) {
-        return new JAXBElement<>(_GetAccountsRequest_QNAME, GetAccountsRequestType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetSecuritiesCodesForSaleResponseType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "GetSecuritiesCodesForSaleResponse")
-    public JAXBElement<GetSecuritiesCodesForSaleResponseType> createGetSecuritiesCodesForSaleResponse(GetSecuritiesCodesForSaleResponseType value) {
-        return new JAXBElement<>(_GetSecuritiesCodesForSaleResponse_QNAME, GetSecuritiesCodesForSaleResponseType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetSecuritiesCouponsDateRequestType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "GetSecuritiesCouponsDateRequest")
-    public JAXBElement<GetSecuritiesCouponsDateRequestType> createGetSecuritiesCouponsDateRequest(GetSecuritiesCouponsDateRequestType value) {
-        return new JAXBElement<>(_GetSecuritiesCouponsDateRequest_QNAME, GetSecuritiesCouponsDateRequestType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ApproveTransferSecuritiesResponseType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "ApproveTransferSecuritiesResponse")
-    public JAXBElement<ApproveTransferSecuritiesResponseType> createApproveTransferSecuritiesResponse(ApproveTransferSecuritiesResponseType value) {
-        return new JAXBElement<>(_ApproveTransferSecuritiesResponse_QNAME, ApproveTransferSecuritiesResponseType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link CancelResaleSecuritiesRequestType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "CancelResaleSecuritiesRequest")
-    public JAXBElement<CancelResaleSecuritiesRequestType> createCancelResaleSecuritiesRequest(CancelResaleSecuritiesRequestType value) {
-        return new JAXBElement<>(_CancelResaleSecuritiesRequest_QNAME, CancelResaleSecuritiesRequestType.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link GetOrganizationByIdentifierResponseType }{@code >}}
      */
     @XmlElementDecl(namespace = NAME_SPACE_URI, name = "GetOrganizationByIdentifierResponse")
     public JAXBElement<GetOrganizationByIdentifierResponseType> createGetOrganizationByIdentifierResponse(GetOrganizationByIdentifierResponseType value) {
         return new JAXBElement<>(_GetOrganizationByIdentifierResponse_QNAME, GetOrganizationByIdentifierResponseType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetSecuritiesCodesForSaleRequestType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "GetSecuritiesCodesForSaleRequest")
-    public JAXBElement<GetSecuritiesCodesForSaleRequestType> createGetSecuritiesCodesForSaleRequest(GetSecuritiesCodesForSaleRequestType value) {
-        return new JAXBElement<>(_GetSecuritiesCodesForSaleRequest_QNAME, GetSecuritiesCodesForSaleRequestType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link TransferSecuritiesRequestType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "TransferSecuritiesRequest")
-    public JAXBElement<TransferSecuritiesRequestType> createTransferSecuritiesRequest(TransferSecuritiesRequestType value) {
-        return new JAXBElement<>(_TransferSecuritiesRequest_QNAME, TransferSecuritiesRequestType.class, null, value);
     }
 
     /**
@@ -974,86 +350,6 @@ public class MqObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link CancelRedemptionSecuritiesRequestType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "CancelRedemptionSecuritiesRequest")
-    public JAXBElement<CancelRedemptionSecuritiesRequestType> createCancelRedemptionSecuritiesRequest(CancelRedemptionSecuritiesRequestType value) {
-        return new JAXBElement<>(_CancelRedemptionSecuritiesRequest_QNAME, CancelRedemptionSecuritiesRequestType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetSecuritiesCouponsDateResponseType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "GetSecuritiesCouponsDateResponse")
-    public JAXBElement<GetSecuritiesCouponsDateResponseType> createGetSecuritiesCouponsDateResponse(GetSecuritiesCouponsDateResponseType value) {
-        return new JAXBElement<>(_GetSecuritiesCouponsDateResponse_QNAME, GetSecuritiesCouponsDateResponseType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetSecuritiesCodesForResaleRequestType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "GetSecuritiesCodesForResaleRequest")
-    public JAXBElement<GetSecuritiesCodesForResaleRequestType> createGetSecuritiesCodesForResaleRequest(GetSecuritiesCodesForResaleRequestType value) {
-        return new JAXBElement<>(_GetSecuritiesCodesForResaleRequest_QNAME, GetSecuritiesCodesForResaleRequestType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link TransferSecuritiesResponseType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "TransferSecuritiesResponse")
-    public JAXBElement<TransferSecuritiesResponseType> createTransferSecuritiesResponse(TransferSecuritiesResponseType value) {
-        return new JAXBElement<>(_TransferSecuritiesResponse_QNAME, TransferSecuritiesResponseType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetRedemptionInterestRequestType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "GetRedemptionInterestRequest")
-    public JAXBElement<GetRedemptionInterestRequestType> createGetRedemptionInterestRequest(GetRedemptionInterestRequestType value) {
-        return new JAXBElement<>(_GetRedemptionInterestRequest_QNAME, GetRedemptionInterestRequestType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetSecuritiesForResaleResponseType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "GetSecuritiesForResaleResponse")
-    public JAXBElement<GetSecuritiesForResaleResponseType> createGetSecuritiesForResaleResponse(GetSecuritiesForResaleResponseType value) {
-        return new JAXBElement<>(_GetSecuritiesForResaleResponse_QNAME, GetSecuritiesForResaleResponseType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetSecuritiesForRedemptionResponseType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "GetSecuritiesForRedemptionResponse")
-    public JAXBElement<GetSecuritiesForRedemptionResponseType> createGetSecuritiesForRedemptionResponse(GetSecuritiesForRedemptionResponseType value) {
-        return new JAXBElement<>(_GetSecuritiesForRedemptionResponse_QNAME, GetSecuritiesForRedemptionResponseType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link PartialUnblockAccountResponseType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "PartialUnblockAccountResponse")
-    public JAXBElement<PartialUnblockAccountResponseType> createPartialUnblockAccountResponse(PartialUnblockAccountResponseType value) {
-        return new JAXBElement<>(_PartialUnblockAccountResponse_QNAME, PartialUnblockAccountResponseType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ApproveSaleSecuritiesRequestType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "ApproveSaleSecuritiesRequest")
-    public JAXBElement<ApproveSaleSecuritiesRequestType> createApproveSaleSecuritiesRequest(ApproveSaleSecuritiesRequestType value) {
-        return new JAXBElement<>(_ApproveSaleSecuritiesRequest_QNAME, ApproveSaleSecuritiesRequestType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetSecuritiesForSaleResponseType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "GetSecuritiesForSaleResponse")
-    public JAXBElement<GetSecuritiesForSaleResponseType> createGetSecuritiesForSaleResponse(GetSecuritiesForSaleResponseType value) {
-        return new JAXBElement<>(_GetSecuritiesForSaleResponse_QNAME, GetSecuritiesForSaleResponseType.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link GetOrganizationByIdentifierRequestType }{@code >}}
      */
     @XmlElementDecl(namespace = NAME_SPACE_URI, name = "GetOrganizationByIdentifierRequest")
@@ -1070,107 +366,11 @@ public class MqObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetRedemptionInterestResponseType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "GetRedemptionInterestResponse")
-    public JAXBElement<GetRedemptionInterestResponseType> createGetRedemptionInterestResponse(GetRedemptionInterestResponseType value) {
-        return new JAXBElement<>(_GetRedemptionInterestResponse_QNAME, GetRedemptionInterestResponseType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetAccountsResponseType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "GetAccountsResponse")
-    public JAXBElement<GetAccountsResponseType> createGetAccountsResponse(GetAccountsResponseType value) {
-        return new JAXBElement<>(_GetAccountsResponse_QNAME, GetAccountsResponseType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ResaleSecuritiesRequestType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "ResaleSecuritiesRequest")
-    public JAXBElement<ResaleSecuritiesRequestType> createResaleSecuritiesRequest(ResaleSecuritiesRequestType value) {
-        return new JAXBElement<>(_ResaleSecuritiesRequest_QNAME, ResaleSecuritiesRequestType.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link UnblockAccountResponseType }{@code >}}
      */
     @XmlElementDecl(namespace = NAME_SPACE_URI, name = "UnblockAccountResponse")
     public JAXBElement<UnblockAccountResponseType> createUnblockAccountResponse(UnblockAccountResponseType value) {
         return new JAXBElement<>(_UnblockAccountResponse_QNAME, UnblockAccountResponseType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ReverseTransactionRequestType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "ReverseTransactionRequest")
-    public JAXBElement<ReverseTransactionRequestType> createReverseTransactionRequest(ReverseTransactionRequestType value) {
-        return new JAXBElement<>(_ReverseTransactionRequest_QNAME, ReverseTransactionRequestType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link CancelSaleSecuritiesResponseType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "CancelSaleSecuritiesResponse")
-    public JAXBElement<CancelSaleSecuritiesResponseType> createCancelSaleSecuritiesResponse(CancelSaleSecuritiesResponseType value) {
-        return new JAXBElement<>(_CancelSaleSecuritiesResponse_QNAME, CancelSaleSecuritiesResponseType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RedemptionSecuritiesRequestType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "RedemptionSecuritiesRequest")
-    public JAXBElement<RedemptionSecuritiesRequestType> createRedemptionSecuritiesRequest(RedemptionSecuritiesRequestType value) {
-        return new JAXBElement<>(_RedemptionSecuritiesRequest_QNAME, RedemptionSecuritiesRequestType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetSalesInterestRequestType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "GetSalesInterestRequest")
-    public JAXBElement<GetSalesInterestRequestType> createGetSalesInterestRequest(GetSalesInterestRequestType value) {
-        return new JAXBElement<>(_GetSalesInterestRequest_QNAME, GetSalesInterestRequestType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetAllocatedSecuritiesResponseType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "GetAllocatedSecuritiesResponse")
-    public JAXBElement<GetAllocatedSecuritiesResponseType> createGetAllocatedSecuritiesResponse(GetAllocatedSecuritiesResponseType value) {
-        return new JAXBElement<>(_GetAllocatedSecuritiesResponse_QNAME, GetAllocatedSecuritiesResponseType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ResaleSecuritiesResponseType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "ResaleSecuritiesResponse")
-    public JAXBElement<ResaleSecuritiesResponseType> createResaleSecuritiesResponse(ResaleSecuritiesResponseType value) {
-        return new JAXBElement<>(_ResaleSecuritiesResponse_QNAME, ResaleSecuritiesResponseType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetSecuritiesCodesForTransferResponseType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "GetSecuritiesCodesForTransferResponse")
-    public JAXBElement<GetSecuritiesCodesForTransferResponseType> createGetSecuritiesCodesForTransferResponse(GetSecuritiesCodesForTransferResponseType value) {
-        return new JAXBElement<>(_GetSecuritiesCodesForTransferResponse_QNAME, GetSecuritiesCodesForTransferResponseType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetSecuritiesCodesForRedemptionResponseType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "GetSecuritiesCodesForRedemptionResponse")
-    public JAXBElement<GetSecuritiesCodesForRedemptionResponseType> createGetSecuritiesCodesForRedemptionResponse(GetSecuritiesCodesForRedemptionResponseType value) {
-        return new JAXBElement<>(_GetSecuritiesCodesForRedemptionResponse_QNAME, GetSecuritiesCodesForRedemptionResponseType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ReverseTransactionResponseType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "ReverseTransactionResponse")
-    public JAXBElement<ReverseTransactionResponseType> createReverseTransactionResponse(ReverseTransactionResponseType value) {
-        return new JAXBElement<>(_ReverseTransactionResponse_QNAME, ReverseTransactionResponseType.class, null, value);
     }
 
     /**
@@ -1182,83 +382,11 @@ public class MqObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetSecuritiesForSaleRequestType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "GetSecuritiesForSaleRequest")
-    public JAXBElement<GetSecuritiesForSaleRequestType> createGetSecuritiesForSaleRequest(GetSecuritiesForSaleRequestType value) {
-        return new JAXBElement<>(_GetSecuritiesForSaleRequest_QNAME, GetSecuritiesForSaleRequestType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SaleSecuritiesRequestType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "SaleSecuritiesRequest")
-    public JAXBElement<SaleSecuritiesRequestType> createSaleSecuritiesRequest(SaleSecuritiesRequestType value) {
-        return new JAXBElement<>(_SaleSecuritiesRequest_QNAME, SaleSecuritiesRequestType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetSecuritiesCodesForTransferRequestType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "GetSecuritiesCodesForTransferRequest")
-    public JAXBElement<GetSecuritiesCodesForTransferRequestType> createGetSecuritiesCodesForTransferRequest(GetSecuritiesCodesForTransferRequestType value) {
-        return new JAXBElement<>(_GetSecuritiesCodesForTransferRequest_QNAME, GetSecuritiesCodesForTransferRequestType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link CancelResaleSecuritiesResponseType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "CancelResaleSecuritiesResponse")
-    public JAXBElement<CancelResaleSecuritiesResponseType> createCancelResaleSecuritiesResponse(CancelResaleSecuritiesResponseType value) {
-        return new JAXBElement<>(_CancelResaleSecuritiesResponse_QNAME, CancelResaleSecuritiesResponseType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetResaleInterestRequestType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "GetResaleInterestRequest")
-    public JAXBElement<GetResaleInterestRequestType> createGetResaleInterestRequest(GetResaleInterestRequestType value) {
-        return new JAXBElement<>(_GetResaleInterestRequest_QNAME, GetResaleInterestRequestType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link PartialBlockAccountRequestType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "PartialBlockAccountRequest")
-    public JAXBElement<PartialBlockAccountRequestType> createPartialBlockAccountRequest(PartialBlockAccountRequestType value) {
-        return new JAXBElement<>(_PartialBlockAccountRequest_QNAME, PartialBlockAccountRequestType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetAllocatedSecuritiesCodesResponseType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "GetAllocatedSecuritiesCodesResponse")
-    public JAXBElement<GetAllocatedSecuritiesCodesResponseType> createGetAllocatedSecuritiesCodesResponse(GetAllocatedSecuritiesCodesResponseType value) {
-        return new JAXBElement<>(_GetAllocatedSecuritiesCodesResponse_QNAME, GetAllocatedSecuritiesCodesResponseType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link CancelTransferSecuritiesRequestType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "CancelTransferSecuritiesRequest")
-    public JAXBElement<CancelTransferSecuritiesRequestType> createCancelTransferSecuritiesRequest(CancelTransferSecuritiesRequestType value) {
-        return new JAXBElement<>(_CancelTransferSecuritiesRequest_QNAME, CancelTransferSecuritiesRequestType.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link UpdateOrganizationRequestType }{@code >}}
      */
     @XmlElementDecl(namespace = NAME_SPACE_URI, name = "UpdateOrganizationRequest")
     public JAXBElement<UpdateOrganizationRequestType> createUpdateOrganizationRequest(UpdateOrganizationRequestType value) {
         return new JAXBElement<>(_UpdateOrganizationRequest_QNAME, UpdateOrganizationRequestType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link UpdateIbanRequestType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "UpdateIbanRequest")
-    public JAXBElement<UpdateIbanRequestType> createUpdateIbanRequest(UpdateIbanRequestType value) {
-        return new JAXBElement<>(_UpdateIbanRequest_QNAME, UpdateIbanRequestType.class, null, value);
     }
 
     /**
@@ -1268,20 +396,6 @@ public class MqObjectFactory {
     public JAXBElement<GetOrganizationsByNameResponseType> createGetOrganizationsByNameResponse(GetOrganizationsByNameResponseType value) {
         return new JAXBElement<>(_GetOrganizationsByNameResponse_QNAME, GetOrganizationsByNameResponseType.class, null, value);
     }
-
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "GetAllocatedSecuritiesCodesRequest")
-    public JAXBElement<GetAllocatedSecuritiesCodesRequestType> createGetAllocatedSecuritiesCodesRequest(GetAllocatedSecuritiesCodesRequestType value) {
-        return new JAXBElement<>(_GetAllocatedSecuritiesCodesRequest_QNAME, GetAllocatedSecuritiesCodesRequestType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetSecuritiesCodesForResaleResponseType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "GetSecuritiesCodesForResaleResponse")
-    public JAXBElement<GetSecuritiesCodesForResaleResponseType> createGetSecuritiesCodesForResaleResponse(GetSecuritiesCodesForResaleResponseType value) {
-        return new JAXBElement<>(_GetSecuritiesCodesForResaleResponse_QNAME, GetSecuritiesCodesForResaleResponseType.class, null, value);
-    }
-
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link BlockAccountRequestType }{@code >}}
      */
@@ -1291,27 +405,11 @@ public class MqObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ApproveRedemptionSecuritiesResponseType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "ApproveRedemptionSecuritiesResponse")
-    public JAXBElement<ApproveRedemptionSecuritiesResponseType> createApproveRedemptionSecuritiesResponse(ApproveRedemptionSecuritiesResponseType value) {
-        return new JAXBElement<>(_ApproveRedemptionSecuritiesResponse_QNAME, ApproveRedemptionSecuritiesResponseType.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link GetPersonByIdentifierResponseType }{@code >}}
      */
     @XmlElementDecl(namespace = NAME_SPACE_URI, name = "GetPersonByIdentifierResponse")
     public JAXBElement<GetPersonByIdentifierResponseType> createGetPersonByIdentifierResponse(GetPersonByIdentifierResponseType value) {
         return new JAXBElement<>(_GetPersonByIdentifierResponse_QNAME, GetPersonByIdentifierResponseType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ApproveSaleSecuritiesResponseType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "ApproveSaleSecuritiesResponse")
-    public JAXBElement<ApproveSaleSecuritiesResponseType> createApproveSaleSecuritiesResponse(ApproveSaleSecuritiesResponseType value) {
-        return new JAXBElement<>(_ApproveSaleSecuritiesResponse_QNAME, ApproveSaleSecuritiesResponseType.class, null, value);
     }
 
     /**
@@ -1330,74 +428,4 @@ public class MqObjectFactory {
         return new JAXBElement<>(_GetPersonsByNameResponse_QNAME, GetPersonsByNameResponseType.class, null, value);
     }
 
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link CancelSaleSecuritiesRequestType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "CancelSaleSecuritiesRequest")
-    public JAXBElement<CancelSaleSecuritiesRequestType> createCancelSaleSecuritiesRequest(CancelSaleSecuritiesRequestType value) {
-        return new JAXBElement<>(_CancelSaleSecuritiesRequest_QNAME, CancelSaleSecuritiesRequestType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetSecuritiesForResaleRequestType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "GetSecuritiesForResaleRequest")
-    public JAXBElement<GetSecuritiesForResaleRequestType> createGetSecuritiesForResaleRequest(GetSecuritiesForResaleRequestType value) {
-        return new JAXBElement<>(_GetSecuritiesForResaleRequest_QNAME, GetSecuritiesForResaleRequestType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ApproveResaleSecuritiesResponseType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "ApproveResaleSecuritiesResponse")
-    public JAXBElement<ApproveResaleSecuritiesResponseType> createApproveResaleSecuritiesResponse(ApproveResaleSecuritiesResponseType value) {
-        return new JAXBElement<>(_ApproveResaleSecuritiesResponse_QNAME, ApproveResaleSecuritiesResponseType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetAllocatedSecuritiesRequestType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "GetAllocatedSecuritiesRequest")
-    public JAXBElement<GetAllocatedSecuritiesRequestType> createGetAllocatedSecuritiesRequest(GetAllocatedSecuritiesRequestType value) {
-        return new JAXBElement<>(_GetAllocatedSecuritiesRequest_QNAME, GetAllocatedSecuritiesRequestType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ApproveTransferSecuritiesRequestType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "ApproveTransferSecuritiesRequest")
-    public JAXBElement<ApproveTransferSecuritiesRequestType> createApproveTransferSecuritiesRequest(ApproveTransferSecuritiesRequestType value) {
-        return new JAXBElement<>(_ApproveTransferSecuritiesRequest_QNAME, ApproveTransferSecuritiesRequestType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RedemptionSecuritiesResponseType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "RedemptionSecuritiesResponse")
-    public JAXBElement<RedemptionSecuritiesResponseType> createRedemptionSecuritiesResponse(RedemptionSecuritiesResponseType value) {
-        return new JAXBElement<>(_RedemptionSecuritiesResponse_QNAME, RedemptionSecuritiesResponseType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetSecuritiesForTransferRequestType }{@code >}}
-     */
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "GetSecuritiesForTransferRequest")
-    public JAXBElement<GetSecuritiesForTransferRequestType> createGetSecuritiesForTransferRequest(GetSecuritiesForTransferRequestType value) {
-        return new JAXBElement<>(_GetSecuritiesForTransferRequest_QNAME, GetSecuritiesForTransferRequestType.class, null, value);
-    }
-
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "SaleSecuritiesResponse")
-    public JAXBElement<SaleSecuritiesResponseType> createSaleSecuritiesResponse(SaleSecuritiesResponseType value) {
-        return new JAXBElement<>(_SaleSecuritiesResponse_QNAME, SaleSecuritiesResponseType.class, null, value);
-    }
-
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "UpdateIbanResponse")
-    public JAXBElement<UpdateIbanResponseType> createUpdateIbanResponse(UpdateIbanResponseType value) {
-        return new JAXBElement<>(_UpdateIbanResponse_QNAME, UpdateIbanResponseType.class, null, value);
-    }
-
-    @XmlElementDecl(namespace = NAME_SPACE_URI, name = "CancelTransferSecuritiesResponse")
-    public JAXBElement<CancelTransferSecuritiesResponseType> createCancelTransferSecuritiesResponse(CancelTransferSecuritiesResponseType value) {
-        return new JAXBElement<>(_CancelTransferSecuritiesResponse_QNAME, CancelTransferSecuritiesResponseType.class, null, value);
-    }
 }

@@ -18,9 +18,15 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.JAXBException;
+import javax.xml.datatype.DatatypeConfigurationException;
+import javax.xml.datatype.DatatypeFactory;
+import javax.xml.datatype.XMLGregorianCalendar;
 import javax.xml.stream.XMLStreamException;
 import java.io.File;
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.util.GregorianCalendar;
 import java.util.UUID;
 
 @RunWith(SpringRunner.class)
@@ -36,6 +42,36 @@ public class MqApplicationTests {
 
     @Autowired
     PingRequestService pingRequestService;
+
+    @Autowired
+    CreateOrganizationRequestService createOrganizationRequestService;
+
+    @Autowired
+    UpdateOrganizationRequestService updateOrganizationRequestService;
+
+    @Autowired
+    GetOrganizationByIdentifierRequestService getOrganizationByIdentifierRequestService;
+
+    @Autowired
+    GetOrganizationsByNameRequestService getOrganizationsByNameRequestService;
+
+    @Autowired
+    CreatePersonRequestService createPersonRequestService;
+
+    @Autowired
+    UpdatePersonRequestService updatePersonRequestService;
+
+    @Autowired
+    GetPersonsByNameRequestService getPersonsByNameRequestService;
+
+    @Autowired
+    GetPersonByIdentifierRequestService getPersonByIdentifierRequestService;
+
+    @Autowired
+    UnblockAccountRequestService unblockAccountRequestService;
+
+    @Autowired
+    BlockAccountRequestService blockAccountRequestService;
 
     @Autowired
     private LogService logService;
@@ -174,6 +210,20 @@ public class MqApplicationTests {
     public void testSendMessageToRabbitMQ() {
         rabbitMQSender.send("helo from jms to rabitt mQ");
     }
+
+    private PaginationType createPaginationObj() {
+        PaginationType paginationType = new PaginationType();
+        paginationType.setPageNumber(5);
+        paginationType.setPageSize(20);
+        return paginationType;
+    }
+
+    public XMLGregorianCalendar convertToXmlGregorianCalendar(LocalDate localDate) throws DatatypeConfigurationException {
+        GregorianCalendar gcal = GregorianCalendar.from(localDate.atStartOfDay(ZoneId.systemDefault()));
+        XMLGregorianCalendar xcal = DatatypeFactory.newInstance().newXMLGregorianCalendar(gcal);
+        return xcal;
+    }
+
 
 }
 

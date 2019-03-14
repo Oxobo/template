@@ -21,11 +21,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+
+
+
 /**
  * <p>Java class for AbstractRequestType complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="AbstractRequestType">
  *   &lt;complexContent>
@@ -41,63 +44,30 @@ import java.util.List;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "AbstractRequestType", propOrder = {
-    "principal",
-    "messageId",
-    "test",
-    "version",
-    "any"
+        "principal",
+        "messageId",
+        "test",
+        "version",
+        "any"
 })
 @XmlRootElement
 @XmlSeeAlso({
-    PingRequestType.class,
-    ApproveResaleSecuritiesRequestType.class,
-    UnblockAccountRequestType.class,
-    UnblockPartyRequestType.class,
-    BlockPartyRequestType.class,
-    ApproveRedemptionSecuritiesRequestType.class,
-    GetRedemptionInterestRequestType.class,
-    GetSecuritiesCodesForResaleRequestType.class,
-    CancelRedemptionSecuritiesRequestType.class,
-    CreatePersonRequestType.class,
-    GetPersonsByNameRequestType.class,
-    GetOrganizationsByNameRequestType.class,
-    GetSecuritiesCodesForSaleRequestType.class,
-    TransferSecuritiesRequestType.class,
-    CancelResaleSecuritiesRequestType.class,
-    GetSecuritiesCouponsDateRequestType.class,
-    GetAccountsRequestType.class,
-    GetSecuritiesCodesForRedemptionRequestType.class,
-    CreateOrganizationRequestType.class,
-    GetSecuritiesForRedemptionRequestType.class,
-    PartialUnblockAccountRequestType.class,
-    GetSalesInterestRequestType.class,
-    RedemptionSecuritiesRequestType.class,
-    ResaleSecuritiesRequestType.class,
-    ReverseTransactionRequestType.class,
-    UpdatePersonRequestType.class,
-    GetOrganizationByIdentifierRequestType.class,
-    ApproveSaleSecuritiesRequestType.class,
-    GetSecuritiesForTransferRequestType.class,
-    GetAllocatedSecuritiesRequestType.class,
-    ApproveTransferSecuritiesRequestType.class,
-    GetSecuritiesForResaleRequestType.class,
-    CancelSaleSecuritiesRequestType.class,
-    BlockAccountRequestType.class,
-    GetAllocatedSecuritiesCodesRequestType.class,
-    UpdateIbanRequestType.class,
-    UpdateOrganizationRequestType.class,
-    CancelTransferSecuritiesRequestType.class,
-    PartialBlockAccountRequestType.class,
-    GetResaleInterestRequestType.class,
-    GetSecuritiesCodesForTransferRequestType.class,
-    GetPersonByIdentifierRequestType.class,
-    GetSecuritiesForSaleRequestType.class,
-    SaleSecuritiesRequestType.class
+        PingRequestType.class,
+        UnblockAccountRequestType.class,
+        CreatePersonRequestType.class,
+        GetPersonsByNameRequestType.class,
+        GetOrganizationsByNameRequestType.class,
+        CreateOrganizationRequestType.class,
+        UpdatePersonRequestType.class,
+        GetOrganizationByIdentifierRequestType.class,
+        BlockAccountRequestType.class,
+        UpdateOrganizationRequestType.class,
+        GetPersonByIdentifierRequestType.class
 })
 @Getter
 @Setter

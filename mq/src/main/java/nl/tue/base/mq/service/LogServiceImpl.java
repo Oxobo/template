@@ -1,16 +1,15 @@
 package nl.tue.base.mq.service;
 
 
-import nl.tue.base.mq.annotation.HandleException;
 import nl.tue.base.dto.library.AckCodeType;
 import nl.tue.base.dto.request.AbstractRequestType;
 import nl.tue.base.dto.response.AbstractResponseType;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import nl.tue.base.mq.model.MqRequestLog;
 import nl.tue.base.mq.model.MqResponseLog;
 import nl.tue.base.mq.repository.MqRequestLogRepository;
 import nl.tue.base.mq.repository.MqResponseLogRepository;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -47,7 +46,6 @@ public class LogServiceImpl implements LogService {
     }
 
     @Override
-    @HandleException
     public MqRequestLog findMqRequestLog(String messageId) {
         return new MqRequestLog();
     }
@@ -81,7 +79,6 @@ public class LogServiceImpl implements LogService {
     }
 
     @Override
-    @HandleException
     public MqResponseLog findMqResponseLog(String correlationId) {
         return responseRepository.findByCorrelationId(correlationId);
     }
