@@ -104,7 +104,7 @@ public class MqApplicationTests {
         createOrganization.setIsoName("ISO_NAME");
         createOrganization.setName("sample_test");
         createOrganization.setRegisterCode("000");
-        createOrganization.setRegisterLocation("JafarAbad");
+        createOrganization.setRegisterLocation("CityX");
         createOrganization.setRegisterDate(
                 convertToXmlGregorianCalendar(
                         LocalDate.of(1987,12,25)));
@@ -177,8 +177,8 @@ public class MqApplicationTests {
         CreatePersonRequestType personRequestType = createPersonRequestService.createType();
         IdentifierType identifierType = generateIdentifierType(IdentifierClassType.NATIONAL_ID, "0991105206");
         personRequestType.setIdentifier(identifierType);
-        personRequestType.setFirstName("jafar");
-        personRequestType.setLastName("jafarian");
+        personRequestType.setFirstName("Fname");
+        personRequestType.setLastName("Lname");
         personRequestType.setBirthDate(convertToXmlGregorianCalendar(LocalDate.of(1987,12,25)));
         personRequestType.setGender(GenderType.MALE);
 
@@ -197,8 +197,8 @@ public class MqApplicationTests {
         UpdatePersonRequestType updatePersonRequestType = updatePersonRequestService.createType();
         IdentifierType identifierType = generateIdentifierType(IdentifierClassType.NATIONAL_ID, "0991105206");
         updatePersonRequestType.setIdentifier(identifierType);
-        updatePersonRequestType.setFirstName("jafar");
-        updatePersonRequestType.setLastName("jafarian");
+        updatePersonRequestType.setFirstName("Fname");
+        updatePersonRequestType.setLastName("Lname");
         updatePersonRequestType.setBirthDate(convertToXmlGregorianCalendar(LocalDate.of(1987,12,25)));
         updatePersonRequestType.setGender(GenderType.MALE);
         String xmlOfupdatePersonRequestType = makeXmlOf(updatePersonRequestType);
@@ -214,8 +214,8 @@ public class MqApplicationTests {
     public void getPersonsByNameRequestTest() throws DatatypeConfigurationException {
         GetPersonsByNameRequestType personsByNameRequestType
                 = getPersonsByNameRequestService.createType();
-        personsByNameRequestType.setFirstName("jafar");
-        personsByNameRequestType.setLastName("jafarian");
+        personsByNameRequestType.setFirstName("Fname");
+        personsByNameRequestType.setLastName("Lname");
         PaginationType paginationType = createPaginationObj();
         personsByNameRequestType.setPagination(paginationType);
         String xmlOfpersonsByNameRequestType = makeXmlOf(personsByNameRequestType);
@@ -304,7 +304,7 @@ public class MqApplicationTests {
     }
 
     public PrincipalType createPrincipalType(){
-        return createPrincipalType("jafar", "jafar", "12");
+        return createPrincipalType("TestUser", "PASSWORD", "12");
     }
 
     public PrincipalType createPrincipalType(String username, String password, String branchCode){
