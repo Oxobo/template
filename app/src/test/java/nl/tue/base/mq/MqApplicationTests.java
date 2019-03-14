@@ -1,33 +1,32 @@
-package nl.tue.base.mq;
+ package nl.tue.base.mq;
 
-import nl.tue.base.dto.library.PrincipalType;
-import nl.tue.base.dto.request.PingRequestType;
-import nl.tue.base.mq.dto.xml.general.MqObjectFactory;
-import nl.tue.base.mq.jms.RabbitMQSender;
-import nl.tue.base.mq.request.PingRequestService;
-import nl.tue.base.mq.service.LogService;
-import nl.tue.base.mq.util.XmlParser;
-import org.apache.commons.io.FileUtils;
-import org.junit.Assert;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.test.context.junit4.SpringRunner;
+ import nl.tue.base.dto.library.*;
+ import nl.tue.base.dto.request.*;
+ import nl.tue.base.mq.jms.RabbitMQSender;
+ import nl.tue.base.mq.request.*;
+ import nl.tue.base.mq.service.LogService;
+ import nl.tue.base.mq.util.XmlParser;
+ import org.apache.commons.io.FileUtils;
+ import org.hamcrest.CoreMatchers;
+ import org.junit.Assert;
+ import org.junit.Test;
+ import org.junit.runner.RunWith;
+ import org.springframework.beans.factory.annotation.Autowired;
+ import org.springframework.boot.test.context.SpringBootTest;
+ import org.springframework.context.annotation.ComponentScan;
+ import org.springframework.test.context.junit4.SpringRunner;
 
-import javax.xml.bind.JAXBElement;
-import javax.xml.bind.JAXBException;
-import javax.xml.datatype.DatatypeConfigurationException;
-import javax.xml.datatype.DatatypeFactory;
-import javax.xml.datatype.XMLGregorianCalendar;
-import javax.xml.stream.XMLStreamException;
-import java.io.File;
-import java.io.IOException;
-import java.time.LocalDate;
-import java.time.ZoneId;
-import java.util.GregorianCalendar;
-import java.util.UUID;
+ import javax.xml.bind.JAXBException;
+ import javax.xml.datatype.DatatypeConfigurationException;
+ import javax.xml.datatype.DatatypeFactory;
+ import javax.xml.datatype.XMLGregorianCalendar;
+ import javax.xml.stream.XMLStreamException;
+ import java.io.File;
+ import java.io.IOException;
+ import java.time.LocalDate;
+ import java.time.ZoneId;
+ import java.util.GregorianCalendar;
+ import java.util.UUID;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -78,137 +77,208 @@ public class MqApplicationTests {
 
 
     @Test
-    public void contextLoads() {
-    }
+    public void pingReqTest() throws XMLStreamException {
 
-
-    @Test
-    public void createXsdAbstractRequestType() throws XMLStreamException {
-
-        PrincipalType principalType = new PrincipalType();
-        principalType.setUsername("jafar");
-        principalType.setPassword("jafar");
-        principalType.setBranchCode("12");
+        PrincipalType principalType = createPrincipalType();
         PingRequestType pingRequestType = pingRequestService.createType();
         pingRequestType.setPrincipal(principalType);
-        pingRequestType.setVersion("2.0");
-        pingRequestType.setMessageId(UUID.randomUUID().toString());
-        pingRequestType.setTest(true);
-        File f = new File("realRequest.xml");
-        try {
-            String re = xmlParser.generateXsd(pingRequestType);
-
-            FileUtils.writeStringToFile(f, re, "UTF-8");
-        } catch (JAXBException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-
-    @Test
-    public void createPingReqWithServices() throws XMLStreamException {
-
-        PingRequestType type = pingRequestService.createType();
-        PrincipalType principalType = new PrincipalType();
-        principalType.setUsername("jafar");
-        principalType.setPassword("jafar");
-        principalType.setBranchCode("12");
-        type.setPrincipal(principalType);
-        type.setVersion("2.0");
-        type.setMessageId(UUID.randomUUID().toString());
-        type.setTest(true);
-        JAXBElement<PingRequestType> element = pingRequestService.createElement(type);
-        Assert.assertNotNull(type);
-
-    }
-    @Test
-    public void createXsdAbstractRequestTypeInsertDB() throws XMLStreamException {
-
-        PrincipalType principalType = new PrincipalType();
-        principalType.setUsername("jafar");
-        principalType.setPassword("jafar");
-        principalType.setBranchCode("12");
-        PingRequestType pingRequestType = new PingRequestType();
-        pingRequestType.setPrincipal(principalType);
-        pingRequestType.setVersion("2.0");
-        pingRequestType.setMessageId(UUID.randomUUID().toString());
-        pingRequestType.setTest(true);
-        File f = new File("realRequest.xml");
-        try {
-            String re = xmlParser.generateXsd(pingRequestType);
-            logService.insertMqRequestLog(pingRequestType, re);
-            FileUtils.writeStringToFile(f, re, "UTF-8");
-        } catch (JAXBException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        setAbstractRequestType(pingRequestType);
+        String makeXmlOfPingRequest = makeXmlOf(pingRequestType);
+        Assert.assertNotNull("xml not generated", makeXmlOfPingRequest);
+        Assert.assertThat("There should at least be a tag in xml with name of request class", makeXmlOfPingRequest,
+                CoreMatchers.containsString("</"
+                        + pingRequestType.getClass().getSimpleName()
+                        + ">"));
     }
 
     @Test
-    public void createXsdRequestType() throws XMLStreamException {
+    public void createOrganizationRequestTest() throws DatatypeConfigurationException {
+        CreateOrganizationRequestType createOrganization =
+                createOrganizationRequestService.createType();
+        PrincipalType principalType = createPrincipalType();
+        createOrganization.setPrincipal(principalType);
+        IdentifierType identifierType = generateIdentifierType(IdentifierClassType.NATIONAL_ID, "0403157919");
+        createOrganization.setIdentifier(identifierType);
+        createOrganization.setCompanyType(OrganizationClassType.OTHER);
+        createOrganization.setDealerCode("13456");
+        createOrganization.setIsoName("ISO_NAME");
+        createOrganization.setName("sample_test");
+        createOrganization.setRegisterCode("000");
+        createOrganization.setRegisterLocation("JafarAbad");
+        createOrganization.setRegisterDate(
+                convertToXmlGregorianCalendar(
+                        LocalDate.of(1987,12,25)));
+        setAbstractRequestType(createOrganization);
 
+        String xmlOfcreateOrganization = makeXmlOf(createOrganization);
+        Assert.assertNotNull("xml not generated", xmlOfcreateOrganization);
+        Assert.assertThat("There should at least be a tag in xml with name of request class", xmlOfcreateOrganization,
+                CoreMatchers.containsString("</"
+                        + createOrganization.getClass().getSimpleName()
+                        + ">"));
 
-        PrincipalType principalType = new PrincipalType();
-        principalType.setUsername("jafar");
-        principalType.setPassword("jafar");
-        principalType.setBranchCode("12");
-        PingRequestType pingRequestType = new PingRequestType();
-        pingRequestType.setPrincipal(principalType);
-        pingRequestType.setVersion("2.0");
-        pingRequestType.setMessageId(UUID.randomUUID().toString());
-        pingRequestType.setTest(true);
-
-        MqObjectFactory mqObjectFactory = new MqObjectFactory();
-        JAXBElement<PingRequestType> pingRequestTypeJAXBElement = mqObjectFactory.createPingRequest(pingRequestType);
-        PingRequestType pingRequest = pingRequestTypeJAXBElement.getValue();
-        File f = new File("realRequest.xml");
-        try {
-            String re = xmlParser.generateXsd(pingRequest);
-
-            FileUtils.writeStringToFile(f, re, "UTF-8");
-        } catch (JAXBException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
     @Test
-    public void createXmlRequestType() throws XMLStreamException {
+    public void updateOrganizationRequestTest() throws DatatypeConfigurationException {
+        UpdateOrganizationRequestType updateOrganizationReq = updateOrganizationRequestService.createType();
+        PrincipalType principalType = createPrincipalType();
+        updateOrganizationReq.setPrincipal(principalType);
+        IdentifierType identifierType = generateIdentifierType(IdentifierClassType.NATIONAL_ID, "0403157919");
+        updateOrganizationReq.setIdentifier(identifierType);
+        updateOrganizationReq.setIsoName("IsoNameTest");
+        updateOrganizationReq.setName("NameNameTest");
+        updateOrganizationReq.setRegisterDate(convertToXmlGregorianCalendar(
+                LocalDate.of(1995,12,25)));
+        updateOrganizationReq.setCompanyType(OrganizationClassType.PRIVATE);
+        setAbstractRequestType(updateOrganizationReq);
 
-
-        PrincipalType principalType = new PrincipalType();
-        principalType.setUsername("jafar");
-        principalType.setPassword("jafar");
-        principalType.setBranchCode("12");
-        PingRequestType pingRequestType = new PingRequestType();
-        pingRequestType.setPrincipal(principalType);
-        pingRequestType.setVersion("2.0");
-        pingRequestType.setMessageId(UUID.randomUUID().toString());
-        pingRequestType.setTest(true);
-
-        MqObjectFactory mqObjectFactory = new MqObjectFactory();
-        JAXBElement<PingRequestType> pingRequestTypeJAXBElement = mqObjectFactory.createPingRequest(pingRequestType);
-        PingRequestType pingRequest = pingRequestTypeJAXBElement.getValue();
-
-        File f = new File("PrincipalType.xml");
-        try {
-            String re = xmlParser.marshall(pingRequest);
-
-            FileUtils.writeStringToFile(f, re, "UTF-8");
-        } catch (JAXBException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        String xmlOfUpdateOrganizationReq = makeXmlOf(updateOrganizationReq);
+        Assert.assertNotNull("xml not generated", xmlOfUpdateOrganizationReq);
+        Assert.assertThat("There should at least be a tag in xml with name of request class", xmlOfUpdateOrganizationReq,
+                CoreMatchers.containsString("</"
+                        + updateOrganizationReq.getClass().getSimpleName()
+                        + ">"));
     }
 
     @Test
-    public void testSendMessageToRabbitMQ() {
-        rabbitMQSender.send("helo from jms to rabitt mQ");
+    public void getOrganizationByIdentifierRequestTest(){
+        GetOrganizationByIdentifierRequestType organizationByIdentifier
+                = getOrganizationByIdentifierRequestService.createType();
+        IdentifierType identifierType = generateIdentifierType(IdentifierClassType.NATIONAL_ID, "0403157919");
+        organizationByIdentifier.setIdentifier(identifierType);
+        setAbstractRequestType(organizationByIdentifier);
+
+        String xmlOfOrganizationByIdentifier = makeXmlOf(organizationByIdentifier);
+        Assert.assertNotNull("xml not generated", xmlOfOrganizationByIdentifier);
+        Assert.assertThat("There should at least be a tag in xml with name of request class",
+                xmlOfOrganizationByIdentifier,
+                CoreMatchers.containsString("</"
+                        + organizationByIdentifier.getClass().getSimpleName()
+                        + ">"));
+
+    }
+
+    @Test
+    public void getOrganizationsByNameRequestTest(){
+        GetOrganizationsByNameRequestType organizationsByName
+                = getOrganizationsByNameRequestService.createType();
+        setAbstractRequestType(organizationsByName);
+        PaginationType paginationType = createPaginationObj();
+        organizationsByName.setName("Digi");
+        organizationsByName.setPagination(paginationType);
+        String xmlOfOrganizationByName = makeXmlOf(organizationsByName);
+        Assert.assertNotNull(xmlOfOrganizationByName);
+
+    }
+
+    @Test
+    public void createPersonRequestServiceTest() throws DatatypeConfigurationException {
+        CreatePersonRequestType personRequestType = createPersonRequestService.createType();
+        IdentifierType identifierType = generateIdentifierType(IdentifierClassType.NATIONAL_ID, "0991105206");
+        personRequestType.setIdentifier(identifierType);
+        personRequestType.setFirstName("jafar");
+        personRequestType.setLastName("jafarian");
+        personRequestType.setBirthDate(convertToXmlGregorianCalendar(LocalDate.of(1987,12,25)));
+        personRequestType.setGender(GenderType.MALE);
+
+        String xmlOfPersonReq = makeXmlOf(personRequestType);
+        Assert.assertNotNull("xml not generated", xmlOfPersonReq);
+        Assert.assertThat("There should at least be a tag in xml with name of request class",
+                xmlOfPersonReq,
+                CoreMatchers.containsString("</"
+                        + personRequestType.getClass().getSimpleName()
+                        + ">"));
+
+    }
+
+    @Test
+    public void updatePersonRequestServiceTest() throws DatatypeConfigurationException {
+        UpdatePersonRequestType updatePersonRequestType = updatePersonRequestService.createType();
+        IdentifierType identifierType = generateIdentifierType(IdentifierClassType.NATIONAL_ID, "0991105206");
+        updatePersonRequestType.setIdentifier(identifierType);
+        updatePersonRequestType.setFirstName("jafar");
+        updatePersonRequestType.setLastName("jafarian");
+        updatePersonRequestType.setBirthDate(convertToXmlGregorianCalendar(LocalDate.of(1987,12,25)));
+        updatePersonRequestType.setGender(GenderType.MALE);
+        String xmlOfupdatePersonRequestType = makeXmlOf(updatePersonRequestType);
+        Assert.assertNotNull("xml not generated", xmlOfupdatePersonRequestType);
+        Assert.assertThat("There should at least be a tag in xml with name of request class",
+                xmlOfupdatePersonRequestType,
+                CoreMatchers.containsString("</"
+                        + updatePersonRequestType.getClass().getSimpleName()
+                        + ">"));
+    }
+
+    @Test
+    public void getPersonsByNameRequestTest() throws DatatypeConfigurationException {
+        GetPersonsByNameRequestType personsByNameRequestType
+                = getPersonsByNameRequestService.createType();
+        personsByNameRequestType.setFirstName("jafar");
+        personsByNameRequestType.setLastName("jafarian");
+        PaginationType paginationType = createPaginationObj();
+        personsByNameRequestType.setPagination(paginationType);
+        String xmlOfpersonsByNameRequestType = makeXmlOf(personsByNameRequestType);
+        Assert.assertNotNull("xml not generated", xmlOfpersonsByNameRequestType);
+        Assert.assertThat("There should at least be a tag in xml with name of request class",
+                xmlOfpersonsByNameRequestType,
+                CoreMatchers.containsString("</"
+                        + personsByNameRequestType.getClass().getSimpleName()
+                        + ">"));
+    }
+
+    @Test
+    public void getPersonsByIdentifierRequestTest() throws DatatypeConfigurationException {
+        GetPersonByIdentifierRequestType personByIdentifierRequestType
+                = getPersonByIdentifierRequestService.createType();
+        setAbstractRequestType(personByIdentifierRequestType);
+        IdentifierType identifierType = generateIdentifierType(IdentifierClassType.FIDA, "123546");
+        personByIdentifierRequestType.setIdentifier(identifierType);
+        String xmlOfpersonByIdentifierRequest = makeXmlOf(personByIdentifierRequestType);
+        Assert.assertNotNull("xml not generated", xmlOfpersonByIdentifierRequest);
+        Assert.assertThat("There should at least be a tag in xml with name of request class",
+                xmlOfpersonByIdentifierRequest,
+                CoreMatchers.containsString("</"
+                        + personByIdentifierRequestType.getClass().getSimpleName()
+                        + ">"));
+
+    }
+
+    @Test
+    public void unblockAccountReqTest(){
+        UnblockAccountRequestType unblockAccountReq =
+                unblockAccountRequestService.createType();
+        setAbstractRequestType(unblockAccountReq);
+        unblockAccountReq.setAccountNumber("111");
+        String xmlOfUnblockAccountReq = makeXmlOf(unblockAccountReq);
+        Assert.assertNotNull("xml not generated", xmlOfUnblockAccountReq);
+        Assert.assertThat("There should at least be a tag in xml with name of request class",
+                xmlOfUnblockAccountReq,
+                CoreMatchers.containsString("</"
+                        + unblockAccountReq.getClass().getSimpleName()
+                        + ">"));
+    }
+
+    @Test
+    public void blockAccountReqTest(){
+        BlockAccountRequestType blockAccountReq =
+                blockAccountRequestService.createType();
+        setAbstractRequestType(blockAccountReq);
+        blockAccountReq.setAccountNumber("111");
+        String xmlOfBlockAccountReq = makeXmlOf(blockAccountReq);
+        Assert.assertNotNull("xml not generated", xmlOfBlockAccountReq);
+        Assert.assertThat("There should at least be a tag in xml with name of request class",
+                xmlOfBlockAccountReq,
+                CoreMatchers.containsString("</"
+                        + blockAccountReq.getClass().getSimpleName()
+                        + ">"));
+    }
+
+    private IdentifierType generateIdentifierType(IdentifierClassType type, String value) {
+        IdentifierType identifierType = new IdentifierType();
+        identifierType.setType(type);
+        identifierType.setValue(value);
+        return identifierType;
     }
 
     private PaginationType createPaginationObj() {
@@ -218,12 +288,43 @@ public class MqApplicationTests {
         return paginationType;
     }
 
+    private String makeXmlOf(AbstractRequestType abstractRequestType) {
+        File f = new File("F_" + abstractRequestType.getClass().getSimpleName() + ".xml");
+        String xmlRequest = "";
+        try {
+            xmlRequest = xmlParser.marshall(abstractRequestType);
+            logService.insertMqRequestLog(abstractRequestType, xmlRequest);
+            FileUtils.writeStringToFile(f, xmlRequest, "UTF-8");
+        } catch (JAXBException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return xmlRequest;
+    }
+
+    public PrincipalType createPrincipalType(){
+        return createPrincipalType("jafar", "jafar", "12");
+    }
+
+    public PrincipalType createPrincipalType(String username, String password, String branchCode){
+        PrincipalType principalType = new PrincipalType();
+        principalType.setUsername(username);
+        principalType.setPassword(password);
+        principalType.setBranchCode(branchCode);
+        return principalType;
+    }
+
     public XMLGregorianCalendar convertToXmlGregorianCalendar(LocalDate localDate) throws DatatypeConfigurationException {
         GregorianCalendar gcal = GregorianCalendar.from(localDate.atStartOfDay(ZoneId.systemDefault()));
         XMLGregorianCalendar xcal = DatatypeFactory.newInstance().newXMLGregorianCalendar(gcal);
         return xcal;
     }
 
-
+    public void setAbstractRequestType(AbstractRequestType abstractRequestType){
+        abstractRequestType.setMessageId(UUID.randomUUID().toString());
+        abstractRequestType.setTest(true);
+        abstractRequestType.setVersion("2.0");
+    }
 }
 
