@@ -11,7 +11,7 @@ import java.util.List;
 public class RuleServiceImpl extends KieBaseConfig implements RuleService {
 
     @Override
-    public <T extends RuleDto> T applyOneRuleOneModel(T model, String groupName) {
+    public <T extends Object> T applyOneRuleOneModel(T model, String groupName) {
         KieSession kieSession = getSession();
         kieSession.getAgenda().getAgendaGroup(groupName).setFocus();
         kieSession.insert(model);
@@ -22,7 +22,7 @@ public class RuleServiceImpl extends KieBaseConfig implements RuleService {
     }
 
     @Override
-    public <T extends RuleDto> List<T> applyOneRuleMoreModels(List<T> models, String groupName) {
+    public <T extends Object> List<T> applyOneRuleMoreModels(List<T> models, String groupName) {
         KieSession kieSession = getSession();
         kieSession.getAgenda().getAgendaGroup(groupName).setFocus();
         for (T e : models) {
@@ -36,7 +36,7 @@ public class RuleServiceImpl extends KieBaseConfig implements RuleService {
     }
 
     @Override
-    public <T extends RuleDto> T applyMoreRulesOneModel(T model, String[] groupName) {
+    public <T extends Object> T applyMoreRulesOneModel(T model, String[] groupName) {
         KieSession kieSession = getSession();
         for (String s : groupName) {
             kieSession.getAgenda().getAgendaGroup(s).setFocus();

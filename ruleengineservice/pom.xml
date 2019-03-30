@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>base</artifactId>
+        <artifactId>code-template</artifactId>
         <groupId>nl.tue</groupId>
         <version>0.0.2-SNAPSHOT</version>
     </parent>

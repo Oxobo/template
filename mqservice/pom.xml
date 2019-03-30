@@ -5,7 +5,7 @@
 
     <parent>
         <groupId>nl.tue</groupId>
-        <artifactId>base</artifactId>
+        <artifactId>code-template</artifactId>
         <version>0.0.2-SNAPSHOT</version>
     </parent>
 

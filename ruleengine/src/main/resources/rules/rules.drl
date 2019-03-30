@@ -1,26 +1,30 @@
-/*
 package rules;
-//import nl.tue.base.secondlibraryservicedto.dto.AccountDto
+import nl.tue.base.ruleengineservicedto.dto.AccountDto
 import nl.tue.base.ruleengineservicedto.util.RuleErrorCode;
+
 dialect  "mvel"
 
-rule "1"
-    salience 2
-    agenda-group "FIRST_LIBRARY"
+rule "3"
+    agenda-group "THIRD_LIBRARY"
 
    when
-        $account : AccountDto( balance < 100 )
+        $models : AccountDto(balance < 100)
    then
+        $models.setMessage(RuleErrorCode.ACCOUNT_LOW_BALANCE.toString());
 
 end
 
 
-rule "2"
-   salience 1
-   agenda-group "FIRST_LIBRARY"
+
+rule "44"
+    agenda-group "FOURTH_LIBRARY"
 
    when
-        $account : AccountDto( balance > 100 )
+        $models : AccountDto(balance > 10000)
    then
-        $account.setMessage(RuleErrorCode.ACCOUNT_HIGH_BALANCE.toString());
-end*/
+        $models.setMessage(RuleErrorCode.ACCOUNT_HIGH_BALANCE.toString());
+
+end
+
+
+

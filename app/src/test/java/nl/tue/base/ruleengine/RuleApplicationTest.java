@@ -3,7 +3,7 @@ package nl.tue.base.ruleengine;
 import nl.tue.base.ruleengine.constants.RuleName;
 import nl.tue.base.ruleengine.domain.ModelRuleEngine;
 import nl.tue.base.ruleengine.service.RuleService;
-import nl.tue.base.ruleengineservicedto.dto.ModelRuleEngineDto;
+import nl.tue.base.ruleengineservicedto.dto.AccountDto;
 import nl.tue.base.ruleengineservicedto.util.RuleErrorCode;
 import org.junit.Assert;
 import org.junit.Test;
@@ -22,9 +22,9 @@ public class RuleApplicationTest {
 
 
     String[] sss;
-    ModelRuleEngineDto modelRuleEngineDto;
-    ModelRuleEngineDto newModelRuleEngineDto;
-    List<ModelRuleEngineDto> models;
+    AccountDto accountDto;
+    AccountDto newAccountDto;
+    List<AccountDto> models;
 
     public RuleApplicationTest() {
         sss = new String[2];
@@ -34,18 +34,18 @@ public class RuleApplicationTest {
         ModelRuleEngine model = new ModelRuleEngine();
         model.setBalance(20);
         ModelMapper modelMapper = new ModelMapper();
-        modelRuleEngineDto = new ModelRuleEngineDto();
-        modelMapper.map(model, modelRuleEngineDto);
+        accountDto = new AccountDto();
+        modelMapper.map(model, accountDto);
 
         ModelRuleEngine newModel = new ModelRuleEngine();
         newModel.setBalance(120);
         ModelMapper newModelMapper = new ModelMapper();
-        newModelRuleEngineDto = new ModelRuleEngineDto();
-        newModelMapper.map(newModel, newModelRuleEngineDto);
+        newAccountDto = new AccountDto();
+        newModelMapper.map(newModel, newAccountDto);
 
         models = new ArrayList<>();
-        models.add(modelRuleEngineDto);
-        models.add(newModelRuleEngineDto);
+        models.add(accountDto);
+        models.add(newAccountDto);
     }
 
     @Autowired
@@ -55,7 +55,7 @@ public class RuleApplicationTest {
     @Test
     public void moreRulesOneModel() {
 
-        ModelRuleEngineDto dto = ruleService.applyMoreRulesOneModel(modelRuleEngineDto, sss);
+        AccountDto dto = ruleService.applyMoreRulesOneModel(accountDto, sss);
         if (dto.getMessage() != null && dto.getMessage().equals(RuleErrorCode.ACCOUNT_LOW_BALANCE.toString())) {
             Assert.assertTrue(dto.getMessage().equals(RuleErrorCode.ACCOUNT_LOW_BALANCE.toString()));
         }
@@ -63,7 +63,7 @@ public class RuleApplicationTest {
 
     @Test
     public void oneRuleMoreModels() {
-        List<ModelRuleEngineDto> lists = ruleService.applyOneRuleMoreModels(models, RuleName.THIRD_LIBRARY);
+        List<AccountDto> lists = ruleService.applyOneRuleMoreModels(models, RuleName.THIRD_LIBRARY);
         if (lists.get(0).getMessage() != null && lists.get(0).getMessage().equals(RuleErrorCode.ACCOUNT_LOW_BALANCE.toString())) {
             Assert.assertTrue(lists.get(0).getMessage().equals(RuleErrorCode.ACCOUNT_LOW_BALANCE.toString()));
         }
@@ -74,7 +74,7 @@ public class RuleApplicationTest {
 
     @Test
     public void oneRuleOneModel() {
-        ModelRuleEngineDto model = ruleService.applyOneRuleOneModel(modelRuleEngineDto, RuleName.THIRD_LIBRARY);
+        AccountDto model = ruleService.applyOneRuleOneModel(accountDto, RuleName.THIRD_LIBRARY);
         if (model.getMessage() != null && model.getMessage().equals(RuleErrorCode.ACCOUNT_LOW_BALANCE.toString())) {
             Assert.assertTrue(model.getMessage().equals(RuleErrorCode.ACCOUNT_LOW_BALANCE.toString()));
         }

@@ -35,11 +35,4 @@ target/
 /.nb-gradle/
 createdFiles.lst
 *inputFiles.lst
-/ruleengineservicedto/target/**
-/ruleengineservice/target/**
-/ruleengineservice/target/*
-/ruleengine/target/**
-/ruleengine/target/*
-/app/target/**
-/app/target/classes/*
-/app/target/maven-status/*
+

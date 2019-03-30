@@ -2,8 +2,11 @@
 
  import nl.tue.base.dto.library.*;
  import nl.tue.base.dto.request.*;
+ import nl.tue.base.dto.response.AbstractResponseType;
+ import nl.tue.base.mq.jms.RabbitMQReceiver;
  import nl.tue.base.mq.jms.RabbitMQSender;
  import nl.tue.base.mq.request.*;
+ import nl.tue.base.mq.response.PingResponseService;
  import nl.tue.base.mq.service.LogService;
  import nl.tue.base.mq.util.XmlParser;
  import org.apache.commons.io.FileUtils;
@@ -38,6 +41,9 @@ public class MqApplicationTests {
 
     @Autowired
     private RabbitMQSender rabbitMQSender;
+
+    @Autowired
+    RabbitMQReceiver rabbitMQReceiver;
 
     @Autowired
     PingRequestService pingRequestService;
@@ -84,6 +90,7 @@ public class MqApplicationTests {
         pingRequestType.setPrincipal(principalType);
         setAbstractRequestType(pingRequestType);
         String makeXmlOfPingRequest = makeXmlOf(pingRequestType);
+        rabbitMQSender.send(makeXmlOfPingRequest);
         Assert.assertNotNull("xml not generated", makeXmlOfPingRequest);
         Assert.assertThat("There should at least be a tag in xml with name of request class", makeXmlOfPingRequest,
                 CoreMatchers.containsString("</"
@@ -111,6 +118,7 @@ public class MqApplicationTests {
         setAbstractRequestType(createOrganization);
 
         String xmlOfcreateOrganization = makeXmlOf(createOrganization);
+        rabbitMQSender.send(xmlOfcreateOrganization);
         Assert.assertNotNull("xml not generated", xmlOfcreateOrganization);
         Assert.assertThat("There should at least be a tag in xml with name of request class", xmlOfcreateOrganization,
                 CoreMatchers.containsString("</"
@@ -134,6 +142,7 @@ public class MqApplicationTests {
         setAbstractRequestType(updateOrganizationReq);
 
         String xmlOfUpdateOrganizationReq = makeXmlOf(updateOrganizationReq);
+        rabbitMQSender.send(xmlOfUpdateOrganizationReq);
         Assert.assertNotNull("xml not generated", xmlOfUpdateOrganizationReq);
         Assert.assertThat("There should at least be a tag in xml with name of request class", xmlOfUpdateOrganizationReq,
                 CoreMatchers.containsString("</"
@@ -150,6 +159,7 @@ public class MqApplicationTests {
         setAbstractRequestType(organizationByIdentifier);
 
         String xmlOfOrganizationByIdentifier = makeXmlOf(organizationByIdentifier);
+        rabbitMQSender.send(xmlOfOrganizationByIdentifier);
         Assert.assertNotNull("xml not generated", xmlOfOrganizationByIdentifier);
         Assert.assertThat("There should at least be a tag in xml with name of request class",
                 xmlOfOrganizationByIdentifier,
@@ -168,7 +178,14 @@ public class MqApplicationTests {
         organizationsByName.setName("Digi");
         organizationsByName.setPagination(paginationType);
         String xmlOfOrganizationByName = makeXmlOf(organizationsByName);
-        Assert.assertNotNull(xmlOfOrganizationByName);
+        rabbitMQSender.send(xmlOfOrganizationByName);
+        Assert.assertNotNull("xml not generated", xmlOfOrganizationByName);
+        Assert.assertThat("There should at least be a tag in xml with name of request class",
+                xmlOfOrganizationByName,
+                CoreMatchers.containsString("</"
+                        + organizationsByName.getClass().getSimpleName()
+                        + ">"));
+
 
     }
 
@@ -183,6 +200,7 @@ public class MqApplicationTests {
         personRequestType.setGender(GenderType.MALE);
 
         String xmlOfPersonReq = makeXmlOf(personRequestType);
+        rabbitMQSender.send(xmlOfPersonReq);
         Assert.assertNotNull("xml not generated", xmlOfPersonReq);
         Assert.assertThat("There should at least be a tag in xml with name of request class",
                 xmlOfPersonReq,
@@ -202,6 +220,7 @@ public class MqApplicationTests {
         updatePersonRequestType.setBirthDate(convertToXmlGregorianCalendar(LocalDate.of(1987,12,25)));
         updatePersonRequestType.setGender(GenderType.MALE);
         String xmlOfupdatePersonRequestType = makeXmlOf(updatePersonRequestType);
+        rabbitMQSender.send(xmlOfupdatePersonRequestType);
         Assert.assertNotNull("xml not generated", xmlOfupdatePersonRequestType);
         Assert.assertThat("There should at least be a tag in xml with name of request class",
                 xmlOfupdatePersonRequestType,
@@ -219,6 +238,7 @@ public class MqApplicationTests {
         PaginationType paginationType = createPaginationObj();
         personsByNameRequestType.setPagination(paginationType);
         String xmlOfpersonsByNameRequestType = makeXmlOf(personsByNameRequestType);
+        rabbitMQSender.send(xmlOfpersonsByNameRequestType);
         Assert.assertNotNull("xml not generated", xmlOfpersonsByNameRequestType);
         Assert.assertThat("There should at least be a tag in xml with name of request class",
                 xmlOfpersonsByNameRequestType,
@@ -235,6 +255,7 @@ public class MqApplicationTests {
         IdentifierType identifierType = generateIdentifierType(IdentifierClassType.FIDA, "123546");
         personByIdentifierRequestType.setIdentifier(identifierType);
         String xmlOfpersonByIdentifierRequest = makeXmlOf(personByIdentifierRequestType);
+        rabbitMQSender.send(xmlOfpersonByIdentifierRequest);
         Assert.assertNotNull("xml not generated", xmlOfpersonByIdentifierRequest);
         Assert.assertThat("There should at least be a tag in xml with name of request class",
                 xmlOfpersonByIdentifierRequest,
@@ -251,6 +272,7 @@ public class MqApplicationTests {
         setAbstractRequestType(unblockAccountReq);
         unblockAccountReq.setAccountNumber("111");
         String xmlOfUnblockAccountReq = makeXmlOf(unblockAccountReq);
+        rabbitMQSender.send(xmlOfUnblockAccountReq);
         Assert.assertNotNull("xml not generated", xmlOfUnblockAccountReq);
         Assert.assertThat("There should at least be a tag in xml with name of request class",
                 xmlOfUnblockAccountReq,
@@ -266,6 +288,7 @@ public class MqApplicationTests {
         setAbstractRequestType(blockAccountReq);
         blockAccountReq.setAccountNumber("111");
         String xmlOfBlockAccountReq = makeXmlOf(blockAccountReq);
+        rabbitMQSender.send(xmlOfBlockAccountReq);
         Assert.assertNotNull("xml not generated", xmlOfBlockAccountReq);
         Assert.assertThat("There should at least be a tag in xml with name of request class",
                 xmlOfBlockAccountReq,
@@ -325,6 +348,12 @@ public class MqApplicationTests {
         abstractRequestType.setMessageId(UUID.randomUUID().toString());
         abstractRequestType.setTest(true);
         abstractRequestType.setVersion("2.0");
+    }
+
+    public void setAbstractResponseType(AbstractResponseType abstractResponseType){
+        abstractResponseType.setAck(AckCodeType.SUCCESS);
+        abstractResponseType.setCorrelationId(UUID.randomUUID().toString());
+
     }
 }
 

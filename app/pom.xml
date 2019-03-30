@@ -5,7 +5,7 @@
 
     <parent>
         <groupId>nl.tue</groupId>
-        <artifactId>base</artifactId>
+        <artifactId>code-template</artifactId>
         <version>0.0.2-SNAPSHOT</version>
     </parent>
 
@@ -38,19 +38,9 @@
         </dependency>
         <dependency>
             <groupId>nl.tue.base</groupId>
-            <artifactId>baseinfo</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>nl.tue.base</groupId>
             <artifactId>ruleengine</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
-<!--        <dependency>
-            <groupId>nl.tue.base</groupId>
-            <artifactId>customer</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>-->
     </dependencies>
 
     <build>

@@ -30,7 +30,7 @@ public class KieBaseConfig {
     private boolean status = true;
     private static Map<String, KieBase> kieBaseCache;
     private final String KIE_BASE_CACHE_NAME = "KIE_BASE_CACHE_NAME";
-    private final String BASE_DIRECTORY = "\\rules";
+    private final String BASE_DIRECTORY = "/rules";
     private final String DRL_DIRECTORY = "src/main/resources";
     private final Logger log = LoggerFactory.getLogger(this.getClass());
     private String inMemoryDrlFileName = StringPool.BLANK;
@@ -51,7 +51,7 @@ public class KieBaseConfig {
                 KieFileSystem kfs = ks.newKieFileSystem() ;
 
                 for (int i = 0 ; i < files.length ;i++) {
-                    ruleNameFirst = BASE_DIRECTORY + "\\" +  files[i].getName();
+                    ruleNameFirst = BASE_DIRECTORY + "/" +  files[i].getName();
                     ruleNameTwo = ruleNameFirst.replaceAll("\\\\","/");
                     content = new String(Files.readAllBytes(Paths.get(getPath(ruleNameFirst))), Charset.forName("UTF-8"));
                     inMemoryDrlFileName =  DRL_DIRECTORY + ruleNameTwo;
