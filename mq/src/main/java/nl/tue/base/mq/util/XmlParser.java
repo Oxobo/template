@@ -34,20 +34,6 @@ public class XmlParser {
         return String.valueOf(writer);
     }
 
-    //from object to xsd text
-    public String generateXsd(AbstractRequestType object) throws JAXBException, IOException {
-
-        JAXBContext context = JAXBContext.newInstance(object.getClass());
-
-        SchemaOutputResolver sor = new SchemaOutputResolverBuilder();
-
-        context.generateSchema(sor);
-
-        return ((SchemaOutputResolverBuilder) sor).result.getWriter().toString();
-    }
-
-
-
     //from xml text to object
     public AbstractResponseType unMarshall(String message, Class type) throws JAXBException {
 

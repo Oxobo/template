@@ -21,7 +21,7 @@ public class RabbitMQSender {
     @Autowired
     private Binding binding;
 
-    private static final Logger logger = LogManager.getLogger(MessageReceiver.class);
+    private static final Logger logger = LogManager.getLogger(RabbitMQSender.class);
 
 
     public void send(String request) {

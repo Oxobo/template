@@ -6,7 +6,6 @@
  import nl.tue.base.mq.jms.RabbitMQReceiver;
  import nl.tue.base.mq.jms.RabbitMQSender;
  import nl.tue.base.mq.request.*;
- import nl.tue.base.mq.response.PingResponseService;
  import nl.tue.base.mq.service.LogService;
  import nl.tue.base.mq.util.XmlParser;
  import org.apache.commons.io.FileUtils;

@@ -35,7 +35,7 @@ public class RabbitMQReceiver {
     @Autowired
     private XmlParser xmlParser;
 
-    private static final Logger logger = LogManager.getLogger(MessageReceiver.class);
+    private static final Logger logger = LogManager.getLogger(RabbitMQReceiver.class);
 
     @RabbitListener(queues="${spring.rabbitmq.template.default-receive-queue}")
     public void recievedMessage(String msg) {
