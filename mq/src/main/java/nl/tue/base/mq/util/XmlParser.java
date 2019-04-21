@@ -17,8 +17,10 @@ import java.io.StringWriter;
 public class XmlParser {
 
     //from object to xml text
-    public String marshall(AbstractRequestType object) throws JAXBException{
+    public String marshall(AbstractRequestType object) {
 
+        StringWriter writer = new StringWriter();
+        try {
         JAXBContext context = JAXBContext.newInstance(object.getClass());
         Marshaller marshaller = context.createMarshaller();
         marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
@@ -27,10 +29,14 @@ public class XmlParser {
         QName rootElementName = new QName(object.getClass().getSimpleName());
         JAXBElement<AbstractRequestType> rootElement = new JAXBElement<>(rootElementName,AbstractRequestType.class,object);
 
-        StringWriter writer = new StringWriter();
+
 
         marshaller.marshal(rootElement, writer);
-
+        }catch (PropertyException e){
+            e.printStackTrace();
+        }catch (JAXBException e){
+            e.printStackTrace();
+        }
         return String.valueOf(writer);
     }
 

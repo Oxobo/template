@@ -33,13 +33,18 @@
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @ComponentScan("nl.tue.base")
-public class MqApplicationTests {
+public class MqApplicationTest {
 
     @Autowired
     XmlParser xmlParser;
 
     @Autowired
     private RabbitMQSender rabbitMQSender;
+
+    @Autowired
+    MqManager<GetPersonsByNameRequestType> getPersonsByNameService;
+    @Autowired
+    MqManager<GetPersonByIdentifierRequestType> getPersonByIdentifierService;
 
     @Autowired
     RabbitMQReceiver rabbitMQReceiver;
@@ -79,7 +84,6 @@ public class MqApplicationTests {
 
     @Autowired
     private LogService logService;
-
 
     @Test
     public void pingReqTest() throws XMLStreamException {
@@ -229,7 +233,7 @@ public class MqApplicationTests {
     }
 
     @Test
-    public void getPersonsByNameRequestTest() throws DatatypeConfigurationException {
+    public void getPersonsByNameRequestTest(){
         GetPersonsByNameRequestType personsByNameRequestType
                 = getPersonsByNameRequestService.createType();
         personsByNameRequestType.setFirstName("Fname");
@@ -248,6 +252,35 @@ public class MqApplicationTests {
 
     @Test
     public void getPersonsByIdentifierRequestTest() throws DatatypeConfigurationException {
+        GetPersonByIdentifierRequestType personByIdentifierRequestType
+                = getPersonByIdentifierRequestService.createType();
+        setAbstractRequestType(personByIdentifierRequestType);
+        IdentifierType identifierType = generateIdentifierType(IdentifierClassType.FIDA, "123546");
+        personByIdentifierRequestType.setIdentifier(identifierType);
+        String xmlOfpersonByIdentifierRequest = makeXmlOf(personByIdentifierRequestType);
+        rabbitMQSender.send(xmlOfpersonByIdentifierRequest);
+        Assert.assertNotNull("xml not generated", xmlOfpersonByIdentifierRequest);
+        Assert.assertThat("There should at least be a tag in xml with name of request class",
+                xmlOfpersonByIdentifierRequest,
+                CoreMatchers.containsString("</"
+                        + personByIdentifierRequestType.getClass().getSimpleName()
+                        + ">"));
+
+    }
+    @Test
+    public void getPersonsByNameRequestMqManagerTest() {
+        GetPersonsByNameRequestType personsByNameRequestType
+                = getPersonsByNameRequestService.createType();
+        personsByNameRequestType.setFirstName("Fname");
+        personsByNameRequestType.setLastName("Lname");
+        PaginationType paginationType = createPaginationObj();
+        personsByNameRequestType.setPagination(paginationType);
+        getPersonsByNameService.service(personsByNameRequestType);
+
+    }
+
+    @Test
+    public void getPersonsByIdentifierMqManagerTest() throws DatatypeConfigurationException {
         GetPersonByIdentifierRequestType personByIdentifierRequestType
                 = getPersonByIdentifierRequestService.createType();
         setAbstractRequestType(personByIdentifierRequestType);
@@ -317,8 +350,6 @@ public class MqApplicationTests {
             xmlRequest = xmlParser.marshall(abstractRequestType);
             logService.insertMqRequestLog(abstractRequestType, xmlRequest);
             FileUtils.writeStringToFile(f, xmlRequest, "UTF-8");
-        } catch (JAXBException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -2,6 +2,7 @@ package nl.tue.base;
 
 import nl.tue.base.dto.request.AbstractRequestType;
 import nl.tue.base.dto.request.BlockAccountRequestType;
+import nl.tue.base.mq.MqManager;
 import nl.tue.base.mq.jms.RabbitMQSender;
 import nl.tue.base.mq.request.BlockAccountRequestService;
 import nl.tue.base.mq.service.LogService;
@@ -35,7 +36,7 @@ public class ApplicationTest {
     private RabbitMQSender rabbitMQSender;
 
     @Autowired
-    BlockAccountRequestService blockAccountRequestService;
+    MqManager<BlockAccountRequestType> blockAccountReqMqManager;
 
     @Autowired
     XmlParser xmlParser;
@@ -66,11 +67,10 @@ public class ApplicationTest {
         Assert.assertNotNull(ruleOnAccountModel.getMessage());
         Assert.assertTrue(RuleErrorCode.ACCOUNT_LOW_BALANCE.toString().equals(ruleOnAccountModel.getMessage()));
 
-        BlockAccountRequestType blockAccountRequestServiceType = blockAccountRequestService.createType();
-        blockAccountRequestServiceType.setAccountNumber(lowBalancedAccount.getAccountNumber());
-        blockAccountRequestServiceType.setDescription("current balance is " + lowBalancedAccount.getBalance()+" less than required minimum");
-        String makeXmlOfPingRequest = makeXmlOf(blockAccountRequestServiceType);
-        rabbitMQSender.send(makeXmlOfPingRequest);
+        BlockAccountRequestType blockAccountReq = new BlockAccountRequestType();
+        blockAccountReq.setAccountNumber(lowBalancedAccount.getAccountNumber());
+        blockAccountReq.setDescription("current balance is " + lowBalancedAccount.getBalance() + " less than required minimum");
+        blockAccountReqMqManager.service(blockAccountReq);
     }
 
     @Test
@@ -80,32 +80,17 @@ public class ApplicationTest {
         highBalancedAccount.setAccountType("Deposit");
         highBalancedAccount.setBalance(10100);
         String[] rules = new String[1];
-        rules[0]=RuleName.FOURTH_LIBRARY;
+        rules[0] = RuleName.FOURTH_LIBRARY;
 
         AccountDto ruleOnAccountModel = ruleService.applyMoreRulesOneModel(highBalancedAccount, rules);
 
         Assert.assertNotNull(ruleOnAccountModel.getMessage());
         Assert.assertTrue(RuleErrorCode.ACCOUNT_HIGH_BALANCE.toString().equals(ruleOnAccountModel.getMessage()));
 
-        BlockAccountRequestType blockAccountRequestServiceType = blockAccountRequestService.createType();
-        blockAccountRequestServiceType.setAccountNumber(highBalancedAccount.getAccountNumber());
-        blockAccountRequestServiceType.setDescription("current balance is " + highBalancedAccount.getBalance()+" more than accepted maximum");
-        String makeXmlOfPingRequest = makeXmlOf(blockAccountRequestServiceType);
-        rabbitMQSender.send(makeXmlOfPingRequest);
+        BlockAccountRequestType blockAccountReq = new BlockAccountRequestType();
+        blockAccountReq.setAccountNumber(highBalancedAccount.getAccountNumber());
+        blockAccountReq.setDescription("current balance is " + highBalancedAccount.getBalance() + " more than accepted maximum");
+        blockAccountReqMqManager.service(blockAccountReq);
     }
 
-    private String makeXmlOf(AbstractRequestType abstractRequestType) {
-        File f = new File("F_" + abstractRequestType.getClass().getSimpleName() + ".xml");
-        String xmlRequest = "";
-        try {
-            xmlRequest = xmlParser.marshall(abstractRequestType);
-            logService.insertMqRequestLog(abstractRequestType, xmlRequest);
-            FileUtils.writeStringToFile(f, xmlRequest, "UTF-8");
-        } catch (JAXBException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return xmlRequest;
-    }
 }

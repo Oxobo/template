@@ -2,7 +2,7 @@ spring:
     application:
         name: base
     profiles:
-        active: dev, swagger
+        active: dev
     messages:
         basename: i18n/messages
 
