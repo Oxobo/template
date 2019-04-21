@@ -1,17 +1,14 @@
 package nl.tue.base;
 
-import nl.tue.base.dto.request.AbstractRequestType;
 import nl.tue.base.dto.request.BlockAccountRequestType;
 import nl.tue.base.mq.MqManager;
 import nl.tue.base.mq.jms.RabbitMQSender;
-import nl.tue.base.mq.request.BlockAccountRequestService;
 import nl.tue.base.mq.service.LogService;
 import nl.tue.base.mq.util.XmlParser;
 import nl.tue.base.ruleengine.constants.RuleName;
 import nl.tue.base.ruleengine.service.RuleService;
 import nl.tue.base.ruleengineservicedto.dto.AccountDto;
 import nl.tue.base.ruleengineservicedto.util.RuleErrorCode;
-import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -19,10 +16,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.test.context.junit4.SpringRunner;
-
-import javax.xml.bind.JAXBException;
-import java.io.File;
-import java.io.IOException;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
